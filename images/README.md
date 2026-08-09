@@ -36,6 +36,23 @@
 | `p2-2-search.png` | 조건별 검색 기능 |
 | `p2-2-ppl.png` | PPL 방송횟수 자동 집계 (Apps Script) |
 
+### 프로젝트 3 · AI 사이트 (`hdhs/` 폴더)
+
+| 파일 | 화면 |
+|---|---|
+| `hdhs/homeshop.webp` | 홈쇼핑 편성 조회 (시간대별) |
+| `hdhs/homeshop_list.webp` | 홈쇼핑 편성 조회 (분류별) |
+| `hdhs/fixedpgm.webp` | 고정 PGM 편성표 |
+| `hdhs/celebrity.webp` | 셀럽 PGM 조회 |
+| `hdhs/industry.webp` | 시간대별 편성 히트맵 · 인사이트 |
+| `hdhs/schedule.webp` | 지상파 · 종편 편성표 |
+| `hdhs/dramavariety.webp` | 드라마 · 예능 편성 및 시청률 |
+| `hdhs/ranking.webp` | 주간 랭킹 |
+| `hdhs/promotion.webp` | 카드 할인 조회 |
+| `hdhs/weather.webp` | 지역별 날씨 달력 |
+| `hdhs/feedback.webp` | 의견 보내기 |
+| `hdhs/security_gate.webp` | 접속 인증 |
+
 ## 아직 비어 있는 자리
 
 아래 이름으로 파일을 넣으면 해당 위치에 자동으로 표시됩니다.
@@ -44,7 +61,6 @@
 |---|---|
 | `p1-1-monitoring.png` | 프로젝트 1-1 · 월별·조직별 효율 모니터링 |
 | `p1-2-ogamsho.png` | 프로젝트 1-2 · 〈오감쇼〉 카테고리 포트폴리오 |
-| `p3-1.png` `p3-2.png` `p3-3.png` | 프로젝트 3 · AI 사이트 화면 |
 
 ## 파일 추가·교체 규칙
 

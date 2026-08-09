@@ -303,15 +303,109 @@ const PROJECTS = [
       {
         no: "3-1",
         title: "화면 소개",
+        // ↓ 문제·실행·성과는 초안입니다. 실제 배경과 성과로 바꿔 주세요.
         blocks: [
           { k: "문제", lines: ["내용을 입력해 주세요"] },
           { k: "실행", lines: ["내용을 입력해 주세요"] },
           { k: "성과", lines: ["내용을 입력해 주세요"] }
         ],
         shots: [
-          { src: "images/p3-1.png", title: "1. 홈쇼핑 14개사 편성 조회 (시간대별 + 분류별)", desc: ["기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요"] },
-          { src: "images/p3-2.png", title: "2. 제목을 입력해 주세요", desc: ["기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요"] },
-          { src: "images/p3-3.png", title: "3. 제목을 입력해 주세요", desc: ["기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요"] }
+          {
+            src: "images/hdhs/homeshop.webp",
+            title: "홈쇼핑 편성 조회 (시간대별)",
+            desc: [
+              "홈쇼핑 14개사의 편성을 시간대별로 한 화면에서 비교",
+              "라이브방송 · 데이터방송 구분 및 사업자(현대 · GS · CJ · 롯데)별 열 구성",
+              "상품분류 필터로 원하는 카테고리만 선택 조회"
+            ]
+          },
+          {
+            src: "images/hdhs/homeshop_list.webp",
+            title: "홈쇼핑 편성 조회 (분류별)",
+            desc: [
+              "동일한 편성 데이터를 상품분류 기준으로 재배열",
+              "경쟁사 카테고리 운영 흐름을 한눈에 파악"
+            ]
+          },
+          {
+            src: "images/hdhs/fixedpgm.webp",
+            title: "고정 PGM 편성표",
+            desc: [
+              "요일 × 시간대 그리드로 고정 프로그램 배치 현황 확인",
+              "경쟁사 고정 편성 구조 파악에 활용"
+            ]
+          },
+          {
+            src: "images/hdhs/celebrity.webp",
+            title: "셀럽 PGM 조회",
+            desc: [
+              "월별 캘린더 형태로 셀럽 프로그램별 운영 상품 조회",
+              "프로그램 · 브랜드 필터로 셀럽 PGM 상품 구성 비교"
+            ]
+          },
+          {
+            src: "images/hdhs/industry.webp",
+            title: "시간대별 편성 히트맵 · 인사이트",
+            desc: [
+              "날짜 × 시간대 히트맵으로 업계 전체 편성 밀도 시각화",
+              "시간대별 카테고리 운영 경향을 요약해 인사이트로 제공"
+            ]
+          },
+          {
+            src: "images/hdhs/schedule.webp",
+            title: "지상파 · 종편 편성표",
+            desc: [
+              "KBS · MBC · SBS · JTBC · MBN · TV조선 · 채널A 편성 조회",
+              "홈쇼핑 시청환경에 영향을 주는 지상파 · 종편 프로그램 확인"
+            ]
+          },
+          {
+            src: "images/hdhs/dramavariety.webp",
+            title: "드라마 · 예능 편성 및 시청률",
+            desc: [
+              "주간 단위 드라마 · 예능 편성과 시청률을 함께 조회",
+              "고시청 프로그램 시간대를 파악해 편성 전략에 반영"
+            ]
+          },
+          {
+            src: "images/hdhs/ranking.webp",
+            title: "주간 랭킹",
+            desc: [
+              "카테고리별 주간 인기 상품 랭킹과 순위 변동 조회",
+              "가격 · 브랜드 정보를 함께 제공"
+            ]
+          },
+          {
+            src: "images/hdhs/promotion.webp",
+            title: "카드 할인 조회",
+            desc: [
+              "날짜별 · 홈쇼핑사별 카드 할인 조건을 한눈에 비교",
+              "프로모션 경쟁 상황 파악에 활용"
+            ]
+          },
+          {
+            src: "images/hdhs/weather.webp",
+            title: "지역별 날씨 달력",
+            desc: [
+              "지역 · 월 단위로 기온과 날씨를 달력 형태로 조회",
+              "계절 상품 편성 시점 판단에 참고"
+            ]
+          },
+          {
+            src: "images/hdhs/feedback.webp",
+            title: "의견 보내기",
+            desc: [
+              "버그 제보 · 기능 개선 · 기타 의견을 유형별로 접수",
+              "사용자 피드백을 반영해 기능을 지속 개선"
+            ]
+          },
+          {
+            src: "images/hdhs/security_gate.webp",
+            title: "접속 인증",
+            desc: [
+              "비밀번호 입력 후 접속하는 구조로 열람 범위 제한"
+            ]
+          }
         ]
       }
     ]
