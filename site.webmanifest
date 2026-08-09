@@ -1,0 +1,13 @@
+{
+  "name": "박민지 · Business Analyst — Portfolio",
+  "short_name": "박민지 포트폴리오",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f9f9f7",
+  "theme_color": "#f9f9f7",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

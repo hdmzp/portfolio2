@@ -1,10 +1,11 @@
 /* ============================================================
    렌더링 로직  —  내용 수정 시에는 건드릴 일이 없습니다
-   내용은 assets/data.js 를 열어 주세요
+   글 내용은 assets/content.js 를 열어 주세요
    ============================================================ */
 
-/* ---------- 경력 기간 자동 계산 ---------- */
-(function renderCareerLength() {
+/* ---------- 경력 기간 자동 계산 ----------
+   글 안에 {년차} · {경력기간} 이라고 써 두면 아래 값으로 바뀝니다 */
+const CAREER = (function () {
   const now = new Date();
 
   // 만 N년 M개월
@@ -12,17 +13,122 @@
              + (now.getMonth() - CAREER_START.getMonth());
   if (now.getDate() < CAREER_START.getDate()) months -= 1;   // 해당 월의 입사일 이전이면 한 달 차감
   const y = Math.floor(months / 12), m = months % 12;
-  const duration = m ? `${y}년 ${m}개월` : `${y}년`;
 
-  // 년차 = 입사 연도를 1년차로 계산
-  const years = now.getFullYear() - CAREER_START.getFullYear() + 1;
-
-  // 페이지 안의 모든 자리에 동일하게 채워 넣습니다
-  document.querySelectorAll(".career-years").forEach(el => el.textContent = years);
-  document.querySelectorAll(".career-duration").forEach(el => el.textContent = duration);
+  return {
+    years: now.getFullYear() - CAREER_START.getFullYear() + 1, // 입사 연도를 1년차로 계산
+    duration: m ? `${y}년 ${m}개월` : `${y}년`
+  };
 })();
 
-/* ---------- 렌더링 ---------- */
+// {년차} · {경력기간} 자리를 실제 값으로 채우고, 눈에 띄게 굵게 표시합니다
+function fill(text) {
+  return String(text)
+    .replaceAll("{년차}", `<b>${CAREER.years}</b>`)
+    .replaceAll("{경력기간}", `<b>${CAREER.duration}</b>`);
+}
+
+/* ============================================================
+   기본 문구 렌더링 (상단 메뉴 · 프로필 · 자기소개 · 경력 · 맨 아래)
+   ============================================================ */
+
+/* ---------- 상단 고정 메뉴 ---------- */
+document.getElementById("navBar").innerHTML = `
+  <div class="nav-brand">${SITE.nav.brand}<span class="dot">.</span></div>
+  <div class="nav-links">
+    ${SITE.nav.links.map(l => `<a href="${l.href}">${l.label}</a>`).join("")}
+  </div>`;
+
+/* ---------- 첫 화면 ---------- */
+(function renderHero() {
+  const h = SITE.hero;
+  // 사진 파일이 없으면 사진 칸 자체를 없앱니다
+  const photo = h.photo
+    ? `<div class="avatar">
+         <img src="${h.photo}" alt="${h.name} 프로필"
+              onerror="this.closest('.avatar').remove()">
+       </div>`
+    : "";
+  document.getElementById("hero").innerHTML = `
+    <div class="hero-top">
+      ${photo}
+      <div>
+        <h1>${h.name}</h1>
+        <div class="role">${h.role}</div>
+        <p class="lede">${fill(h.lede)}</p>
+        <div class="contact">${h.contact.map(c => `<span>${c}</span>`).join("")}</div>
+      </div>
+    </div>
+    <div class="traits">
+      ${h.traits.map(t => `<div class="trait"><b>${t.k}</b>${t.v}</div>`).join("")}
+    </div>
+    <div class="tools">
+      ${h.tools.map(t => `<span class="tool"><i>${t.use}</i>${t.name}</span>`).join("")}
+    </div>`;
+})();
+
+/* ---------- 자기소개 ---------- */
+(function renderAbout() {
+  const a = SITE.about;
+  document.getElementById("aboutBox").innerHTML = `
+    <div class="sec-head">
+      <div class="sec-label">${a.label}</div>
+      <h2>${a.heading}</h2>
+    </div>
+    <div class="about">
+      <h3>${a.title}</h3>
+      ${a.paragraphs.map(p => `<p>${fill(p)}</p>`).join("")}
+    </div>`;
+})();
+
+/* ---------- 경력사항 ---------- */
+(function renderCareer() {
+  const c = SITE.career;
+  document.getElementById("careerBox").innerHTML = `
+    <div class="sec-head">
+      <div class="sec-label">${c.label}</div>
+      <h2>${c.heading}</h2>
+    </div>
+    <div class="career">
+      ${c.jobs.map(j => `
+        <div class="job">
+          <div class="j-period">${j.period}</div>
+          <div>
+            <div class="j-org">${j.org}</div>
+            <div class="j-role">${j.role}</div>
+          </div>
+          <div class="j-tags">${(j.tags || []).map(t => `<span>${t}</span>`).join("")}</div>
+        </div>`).join("")}
+    </div>`;
+})();
+
+/* ---------- 프로젝트 섹션 머리말 (목록 자체는 아래에서 채웁니다) ---------- */
+(function renderProjectsFrame() {
+  const p = SITE.projects;
+  document.getElementById("projectsBox").innerHTML = `
+    <div class="sec-head">
+      <div class="sec-label">${p.label}</div>
+      <h2>${p.heading}</h2>
+      <p class="sub">${p.sub}</p>
+    </div>
+    <div class="proj-tools">
+      <span class="hint">${p.hint}</span>
+      <button class="btn" id="expandAll" type="button">${p.expandAll}</button>
+      <button class="btn" id="collapseAll" type="button">${p.collapseAll}</button>
+    </div>
+    <div class="projects" id="projectList"></div>`;
+})();
+
+/* ---------- 맨 아래 ---------- */
+(function renderFooter() {
+  const f = SITE.footer;
+  document.getElementById("footerBox").innerHTML = `
+    <div class="f-name">${f.name}</div>
+    <div class="f-note">${f.lines.join("<br>")}</div>`;
+})();
+
+/* ============================================================
+   프로젝트 렌더링
+   ============================================================ */
 const KEY_CLASS = { "문제": "problem", "실행": "action", "성과": "result" };
 
 function renderBlock(b) {

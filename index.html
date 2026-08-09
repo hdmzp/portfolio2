@@ -28,159 +28,42 @@
 <meta name="twitter:description" content="홈쇼핑 방송 편성과 데이터 기반 의사결정 체계를 함께 만들어 온 Business Analyst 박민지의 포트폴리오.">
 <meta name="twitter:image" content="https://hdmzp.github.io/portfolio2/images/og-cover.png">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<!-- 브라우저 탭 · 홈 화면에 추가 아이콘 — 프로필 일러스트를 사용합니다 -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#f9f9f7">
 
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
+<!-- ============================================================
+     이 파일에는 글 내용이 없습니다. 화면에 보이는 모든 문구는
+     assets/content.js 에 모아 두었으니 그 파일만 고치면 됩니다.
+     (위쪽 <head> 의 공유 미리보기 문구만 예외입니다)
+     ============================================================ -->
+
 <nav class="nav">
-  <div class="nav-inner">
-    <div class="nav-brand">MINJI PARK<span class="dot">.</span></div>
-    <div class="nav-links">
-      <a href="#about">소개</a>
-      <a href="#career">경력</a>
-      <a href="#projects">프로젝트</a>
-    </div>
-  </div>
+  <div class="nav-inner" id="navBar"></div>
 </nav>
 
-<!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="wrap">
-    <div class="hero-top">
-      <!-- 프로필 이미지: images/profile.png 가 있으면 표시되고, 없으면 자리표시자가 남습니다 -->
-      <div class="avatar">
-        <img src="images/profile.png" alt="박민지 프로필"
-             onload="this.parentNode.querySelector('.ph')?.remove()"
-             onerror="this.remove()">
-        <div class="ph">프로필 이미지<br><code>images/profile.png</code></div>
-      </div>
-      <div>
-        <h1>박민지</h1>
-        <div class="role">Business Analyst</div>
-        <!-- 경력 년차·개월은 2020.10.20 기준 자동 계산 (하단 스크립트 CAREER_START)
-             .career-years / .career-duration 클래스를 쓰면 페이지 어디에서든 같은 값이 채워집니다 -->
-        <p class="lede">전체 경력 <b class="career-years"></b>년차(만 <b class="career-duration"></b>) 데이터 분석가입니다.</p>
-        <div class="contact">
-          <span>mj2040354@gmail.com</span>
-          <span>현대홈쇼핑 라이브전략팀</span>
-          <span>성균관대 데이터사이언스융합학과 (석사 재학)</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="traits">
-      <div class="trait"><b>분석적</b>데이터를 직접 추출·가공하며 SQL·Power BI·Python 등 도구를 활용해 해석합니다</div>
-      <div class="trait"><b>계획적</b>목표를 단계적으로 나누어 실행 가능한 계획으로 만들며 추진력이 뛰어납니다</div>
-      <div class="trait"><b>효율적</b>시스템·프로세스를 자동화하고 업무 비효율을 개선합니다</div>
-      <div class="trait"><b>협력적</b>편성담당자는 홈쇼핑 여러 부서의 허브로, 원활한 커뮤니케이션 역량을 발휘합니다</div>
-    </div>
-
-    <div class="tools">
-      <span class="tool"><i>추출</i>MySQL</span>
-      <span class="tool"><i>분석·가공·자동화</i>Python</span>
-      <span class="tool"><i>시각화</i>Power BI</span>
-      <span class="tool"><i>시각화</i>MS Office</span>
-      <span class="tool"><i>자동화</i>JavaScript</span>
-    </div>
-  </div>
+  <div class="wrap" id="hero"></div>
 </header>
 
 <main>
-
-<!-- ================= 자기소개 ================= -->
-<section id="about">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-label">ABOUT</div>
-      <h2>자기소개</h2>
-    </div>
-    <div class="about">
-      <h3>홈쇼핑 업계의 Business Analyst, 방송 편성 담당자</h3>
-      <p>
-        <b class="career-years"></b>년차 홈쇼핑 방송 편성담당자입니다. 현대홈쇼핑은 2개의 TV채널(Live/Data) 및 모바일(Hmall) 플랫폼을 운영하며
-        <b>TV 채널 매출은 연간 2조 원</b>에 달합니다. 라이브·데이터방송 채널 편성담당자로서 카테고리별 실적 관리와
-        상품 포트폴리오 조정을 통해 매출 극대화를 추진해 왔습니다.
-      </p>
-      <p>
-        편성담당자는 단순한 방송 편성을 넘어 계획 수립, 방송 제작, 프로모션 기획 등 전방위적 운영에 깊이 관여하며,
-        홈쇼핑 방송의 길잡이 역할을 수행합니다. 비즈니스 문제를 정의하고 해결 방안을 제시할 뿐 아니라 직접 실행에 옮기는 주체입니다.
-        상품 생명주기가 짧은 홈쇼핑 유통 환경에서 <b>‘문제 정의 → 데이터 기반 전략 수립 → 실행’</b>의 전 과정을 경험했으며,
-        어떤 조직에서도 빠르게 적응할 수 있는 실무형 역량을 갖추고 있습니다.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 경력사항 ================= -->
-<section id="career">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-label">CAREER</div>
-      <h2>경력사항</h2>
-    </div>
-    <div class="career">
-      <div class="job">
-        <div class="j-period">2024.11 – 현재</div>
-        <div>
-          <div class="j-org">현대홈쇼핑 라이브전략팀</div>
-          <div class="j-role">TV 라이브방송 편성</div>
-        </div>
-        <div class="j-tags"><span>지표 변화 분석</span><span>목표 설계</span><span>데이터 분석 → 상품 운영(편성)</span></div>
-      </div>
-      <div class="job">
-        <div class="j-period">2020.10 – 2024.10</div>
-        <div>
-          <div class="j-org">현대홈쇼핑 데이터운영팀 / 편성팀</div>
-          <div class="j-role">TV 데이터방송 편성</div>
-        </div>
-        <div class="j-tags"><span>업무 자동화</span><span>업무 시스템 · 프로세스 개선</span></div>
-      </div>
-      <div class="job">
-        <div class="j-period">2019.07 – 2019.12</div>
-        <div>
-          <div class="j-org">더에스엠씨그룹 브랜드전략본부</div>
-          <div class="j-role">브랜드미디어 YouTube 채널컨설팅 (인턴)</div>
-        </div>
-        <div class="j-tags"><span>콘텐츠 기획 · 제작 역량</span><span>고객사 맞춤 마케팅 솔루션</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 프로젝트 ================= -->
-<section id="projects">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-label">PROJECTS</div>
-      <h2>프로젝트</h2>
-      <p class="sub">각 프로젝트를 클릭하면 문제 · 실행 · 성과 상세 내용이 펼쳐집니다.</p>
-    </div>
-
-    <div class="proj-tools">
-      <span class="hint">클릭해서 펼쳐보기</span>
-      <button class="btn" id="expandAll" type="button">전체 펼치기</button>
-      <button class="btn" id="collapseAll" type="button">전체 접기</button>
-    </div>
-
-    <div class="projects" id="projectList"><!-- JS가 PROJECTS 데이터로 채웁니다 --></div>
-  </div>
-</section>
-
+  <section id="about"><div class="wrap" id="aboutBox"></div></section>
+  <section id="career"><div class="wrap" id="careerBox"></div></section>
+  <section id="projects"><div class="wrap" id="projectsBox"></div></section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="f-name">박민지 · Business Analyst</div>
-    <div class="f-note">
-      mj2040354@gmail.com<br>
-      본 페이지는 개인 포트폴리오이며, 기재된 수치는 실제 업무 성과를 기반으로 작성되었습니다.
-    </div>
-  </div>
+  <div class="wrap" id="footerBox"></div>
 </footer>
 
-<script src="assets/data.js"></script>
+<script src="assets/content.js"></script>
 <script src="assets/app.js"></script>
 
 </body>
