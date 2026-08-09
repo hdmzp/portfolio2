@@ -23,8 +23,20 @@
 | `p2-1-dashboard-live.png` | Power BI · 기간별 사업부/팀 실적 조회 |
 | `p2-1-dashboard-brand.png` | Power BI · 협력사/브랜드별 실적 조회 |
 | `p2-1-dashboard-raw.png` | Power BI · 방송 실적 RAW 데이터 |
-| `p2-1-conversion.png` | 구매전환율 조회 대시보드 |
+| `p2-1-team-pgm.png` | 팀 · 사업부 PGM 효율 조회 |
+| `p2-1-daily-trend.png` | 일자별 추이 조회 |
+| `p2-1-fixedpgm-1.png` `p2-1-fixedpgm-2.png` | 고정 PGM 실적 조회 ① ② |
+| `p2-1-fashion-1.png` `p2-1-fashion-2.png` | 패션잡화 PGM 실적 조회 ① ② |
+| `p2-1-conversion.png` | 방송코드별 실제 구매전환율 조회 |
 | `p2-1-conversion-raw.png` | 구매전환율 RAW 데이터 |
+
+### 프로젝트 2-3 · 당직 매출 추정 · 보고 자동화
+
+| 파일 | 내용 |
+|---|---|
+| `p2-3-duty-1.png` | 매출속보 자동 불러오기 · PGM 목록 |
+| `p2-3-duty-2.png` | 프로그램별 실적 검토 · 보정 |
+| `p2-3-duty-3.png` | 보고 문구 자동 생성 |
 
 ### 프로젝트 2-2 · 통합 선편성 캘린더
 
