@@ -48,20 +48,26 @@ function renderMetric(m) {
 
 function renderShot(s) {
   const desc = (s.desc || []).map(d => `<li>${d}</li>`).join("");
-  // 이미지가 있으면 로드 후 자리표시자를 지우고, 없으면 이미지 태그 쪽을 지웁니다.
+  // 이미지가 아직 없으면 이미지 칸을 통째로 없애고 설명만 남깁니다.
+  //   → 공개된 사이트에 '이미지 자리' 안내가 노출되지 않도록 하기 위함
+  //   → 나중에 파일만 넣으면 이미지가 자동으로 다시 나타납니다
   // 표·대시보드 캡처는 카드 안에서 작게 보이므로 클릭하면 원본 크기로 열립니다.
-  const img = s.src
-    ? `<a class="zoom" href="${s.src}" target="_blank" rel="noopener" title="클릭하면 원본 크기로 열립니다">
-         <img src="${s.src}" alt="${s.title || ""}" loading="lazy"
-              onload="this.closest('.shot-img').querySelector('.ph')?.remove()"
-              onerror="this.closest('.zoom').remove()">
-       </a>`
-    : "";
+  if (!s.src) return renderShotTextOnly(s, desc);
   return `<div class="shot">
-      <div class="shot-img">
-        ${img}
-        <div class="ph">이미지 자리<br><code>${s.src || "images/파일명.png"}</code></div>
+      <a class="shot-img zoom" href="${s.src}" target="_blank" rel="noopener"
+         title="클릭하면 원본 크기로 열립니다">
+        <img src="${s.src}" alt="${s.title || ""}" loading="lazy"
+             onerror="this.closest('.shot').classList.add('no-img'); this.closest('.shot-img').remove()">
+      </a>
+      <div class="shot-txt">
+        <h4>${s.title || ""}</h4>
+        <ul>${desc}</ul>
       </div>
+    </div>`;
+}
+
+function renderShotTextOnly(s, desc) {
+  return `<div class="shot no-img">
       <div class="shot-txt">
         <h4>${s.title || ""}</h4>
         <ul>${desc}</ul>

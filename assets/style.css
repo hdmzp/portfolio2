@@ -276,18 +276,10 @@ section { padding: 52px 0 4px; }
   background: var(--page); border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
   min-height: 190px; display: grid; place-items: center;
 }
-.shot-img .zoom { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.shot-img.zoom { cursor: zoom-in; }
 .shot-img img { width: 100%; height: 100%; object-fit: contain; }
-.shot-img .ph {
-  border: 1.5px dashed var(--grid); border-radius: 10px; margin: 14px;
-  padding: 26px 18px; text-align: center; font-size: 12.5px; color: var(--muted); line-height: 1.7;
-  width: calc(100% - 28px);
-}
-.shot-img .ph code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 11.5px; background: var(--surface); border: 1px solid var(--border);
-  border-radius: 5px; padding: 1px 6px; color: var(--ink-2);
-}
+/* 이미지가 없거나 불러오지 못한 카드는 설명이 한 줄로 넓게 펼쳐집니다 */
+.shot.no-img { grid-template-columns: 1fr; }
 .shot-txt { display: flex; flex-direction: column; gap: 10px; }
 .shot-txt h4 {
   font-size: 13.5px; font-weight: 750; color: #fff; background: var(--accent);

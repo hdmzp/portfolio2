@@ -33,7 +33,8 @@ const CAREER_START = new Date(2020, 9, 20); // 월은 0부터 → 9 = 10월
      diagram: "join",                                  // 특수 도식 (생략 가능)
      shots: [ { src:"images/xxx.png", title:"제목", desc:["설명1","설명2"] } ]
    }
-   ▸ shots 의 src 파일이 아직 없으면 자동으로 "이미지 자리" 안내가 표시됩니다.
+   ▸ shots 의 src 파일이 아직 없으면 이미지 칸 없이 설명만 표시됩니다.
+     (파일을 넣으면 다음 배포부터 이미지가 자동으로 나타납니다)
    ▸ lines 안에서는 <b>강조</b> 태그를 쓸 수 있습니다.
    ============================================================ */
 
@@ -70,9 +71,6 @@ const PROJECTS = [
         metrics: [
           { label: "순주문 30% 미만 프로그램 비중", from: "10.4%", to: "7%", note: "’25년 → ’26.1Q", dir: "down" },
           { label: "PGM 50% 미만 프로그램 비중", from: "17.7%", to: "13%", note: "’25년 → ’26.1Q", dir: "down" }
-        ],
-        shots: [
-          { src: "images/p1-1-monitoring.png", title: "월별 · 조직별 효율 모니터링", desc: ["기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요"] }
         ]
       },
       {
@@ -107,9 +105,6 @@ const PROJECTS = [
           { label: "리빙 카테고리 편성 비중", from: "5%", to: "11%", note: "카테고리 다변화", dir: "up" },
           { label: "’26.1Q 순주문 달성률", to: "+24%p", note: "전년 대비", dir: "up" },
           { label: "’26.1Q 공헌 달성률", to: "+23%p", note: "전년 대비", dir: "up" }
-        ],
-        shots: [
-          { src: "images/p1-2-ogamsho.png", title: "&lt;오감쇼&gt; 카테고리 포트폴리오", desc: ["기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요", "기능 소개를 입력해 주세요"] }
         ]
       }
     ]
