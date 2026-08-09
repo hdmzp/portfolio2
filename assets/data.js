@@ -15,6 +15,8 @@ const CAREER_START = new Date(2020, 9, 20); // 월은 0부터 → 9 = 10월
    {
      title:   "프로젝트 제목",
      badge:   "우측 상단 뱃지",        // 생략 가능
+     tag:     "개인",                  // 제목 옆 작은 표식 (생략 가능)
+     tone:    "personal",              // 카드 색을 다르게 (개인 프로젝트용, 생략 가능)
      period:  "2024.11 ~ 현재",        // 생략 가능
      summary: "접혀 있을 때 보이는 한 줄 요약",  // 생략 가능
      link:    { href: "https://...", label: "사이트 바로가기" },  // 생략 가능
@@ -749,6 +751,16 @@ const PROJECTS = [
         ]
       }
     ]
+  },
+
+  {
+    title: "노인 무임승차와 지하철 적자 실증 분석",
+    tag: "개인",
+    tone: "personal",
+    period: "2026.04 ~ 2026.06 (3개월)",
+    summary: "성균관대학교 소프트웨어융합대학원 데이터사이언스융합학과 「데이터분석언어」 프로젝트",
+    link: { href: "https://hdmzp.github.io/subway/", label: "사이트 바로가기" },
+    items: []
   }
 ];
 

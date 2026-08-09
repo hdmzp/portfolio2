@@ -104,10 +104,14 @@ function renderProject(p, i) {
          ${p.link.label || "바로가기"}<span aria-hidden="true">↗</span>
        </a>`
     : "";
-  return `<details class="proj" id="project-${i + 1}">
+  // tone 이 있으면 카드 색을 달리합니다 (예: 개인 프로젝트 → .personal)
+  const tone = p.tone ? ` ${p.tone}` : "";
+  // tag 는 제목 옆에 붙는 작은 표식입니다 (예: 개인)
+  const tag = p.tag ? `<span class="p-tag">${p.tag}</span>` : "";
+  return `<details class="proj${tone}" id="project-${i + 1}">
       <summary>
         <span class="p-no">${no}</span>
-        <span class="p-title">${p.title}</span>
+        <span class="p-title">${p.title}${tag}</span>
         <span class="p-right">
           ${p.badge ? `<span class="p-badge">${p.badge}</span>` : ""}
           <span class="chev"></span>

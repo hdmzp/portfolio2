@@ -186,6 +186,14 @@ section { padding: 52px 0 4px; }
   display: grid; place-items: center; font-variant-numeric: tabular-nums;
 }
 .p-title { font-size: 17px; font-weight: 800; letter-spacing: -0.015em; line-height: 1.35; }
+/* 제목 옆 작은 표식 (개인 프로젝트 등) — 모바일에서도 계속 보입니다 */
+.p-tag {
+  display: inline-block; vertical-align: 2px; margin-left: 8px;
+  font-size: 10px; font-weight: 750; line-height: 1.5; letter-spacing: 0.02em;
+  padding: 1px 7px; border-radius: 999px; white-space: nowrap;
+  color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+}
 .p-meta { grid-column: 2; font-size: 12.5px; color: var(--muted); margin-top: 3px; display: flex; flex-wrap: wrap; gap: 4px 12px; }
 .p-right { grid-row: span 2; display: flex; align-items: center; gap: 12px; }
 .p-badge {
@@ -202,6 +210,15 @@ section { padding: 52px 0 4px; }
   .p-title { font-size: 15.5px; }
   .p-badge { display: none; }
 }
+
+/* 개인 프로젝트 카드 — 회사 프로젝트(1~4)와 구분되도록 색을 달리합니다.
+   --accent 를 카드 안에서만 바꾸므로 번호칸 · 표식 · 바로가기 버튼까지 한 번에 따라옵니다 */
+.proj.personal {
+  --accent: var(--s2);
+  background: color-mix(in srgb, var(--s2) 5%, var(--surface));
+  border-color: color-mix(in srgb, var(--s2) 22%, transparent);
+}
+.proj.personal[open] { border-color: color-mix(in srgb, var(--s2) 40%, transparent); }
 
 .p-body { padding: 0 22px 24px; border-top: 1px solid var(--grid); margin-top: 2px; padding-top: 4px; }
 @media (max-width: 640px) { .p-body { padding: 4px 16px 20px; } }
