@@ -63,7 +63,6 @@
 | `hdhs/promotion.webp` | 카드 할인 조회 |
 | `hdhs/weather.webp` | 지역별 날씨 달력 |
 | `hdhs/feedback.webp` | 의견 보내기 |
-| `hdhs/security_gate.webp` | 접속 인증 |
 
 ## 아직 비어 있는 자리
 
@@ -75,8 +74,8 @@
 | `p1-2-ogamsho.png` | 1-2 · 〈오감쇼〉 카테고리 포트폴리오 |
 | `auto-daily.png` | 3-1 · 식품사업부 Daily 실적 분석 |
 | `auto-ogamsho.png` | 3-2 · 오감쇼 상세분석 화면 |
-| `monthly-report.png` | 3-3 · 협력사별 운영현황 결과물 |
 | `campaign-3050.png` | 3-4 · 캠페인 운영현황 화면 |
+| `hdhs/lavangba.webp` | 4-1 · 홈쇼핑 방송 실적 (라방바) 대시보드 |
 
 ## 파일 추가·교체 규칙
 
