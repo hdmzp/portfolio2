@@ -45,6 +45,9 @@
 
 | 파일 | 내용 |
 |---|---|
+| `auto-daily.png` | 3-1 심화분석 화면 |
+| `auto-ogamsho.png` | 3-2 오감쇼 상세분석 화면 |
+| `campaign-3050.png` | 3-4 캠페인 운영현황 화면 |
 | `duty-1.png` `duty-2.png` `duty-3.png` | 3-5 당직 매출 추정 · 보고 자동화 |
 
 ### 프로젝트 4 · AI 사이트 (`hdhs/` 폴더)
@@ -72,9 +75,6 @@
 |---|---|
 | `p1-1-monitoring.png` | 1-1 · 월별·조직별 효율 모니터링 |
 | `p1-2-ogamsho.png` | 1-2 · 〈오감쇼〉 카테고리 포트폴리오 |
-| `auto-daily.png` | 3-1 · 식품사업부 Daily 실적 분석 |
-| `auto-ogamsho.png` | 3-2 · 오감쇼 상세분석 화면 |
-| `campaign-3050.png` | 3-4 · 캠페인 운영현황 화면 |
 | `hdhs/lavangba.webp` | 4-1 · 홈쇼핑 방송 실적 (라방바) 대시보드 |
 
 ## 파일 추가·교체 규칙
