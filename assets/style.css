@@ -205,6 +205,16 @@ section { padding: 52px 0 4px; }
 .p-body { padding: 0 22px 24px; border-top: 1px solid var(--grid); margin-top: 2px; padding-top: 4px; }
 @media (max-width: 640px) { .p-body { padding: 4px 16px 20px; } }
 
+/* 결과물 바로가기 버튼 */
+.p-link {
+  display: inline-flex; align-items: center; gap: 7px; margin-top: 20px;
+  font-size: 13.5px; font-weight: 750; color: #fff; background: var(--accent);
+  border-radius: 999px; padding: 9px 18px;
+}
+.p-link:hover { text-decoration: none; filter: brightness(1.08); }
+.p-link span { font-size: 12px; }
+.p-link + .item { padding-top: 20px; }
+
 /* 세부 항목 (1-1, 1-2 ...) */
 .item { padding-top: 24px; }
 .item + .item { border-top: 1px dashed var(--grid); margin-top: 8px; }

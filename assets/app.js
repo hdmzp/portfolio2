@@ -91,6 +91,12 @@ function renderProject(p, i) {
   const no = String(i + 1).padStart(2, "0");
   const meta = [p.period, p.summary].filter(Boolean).map(t => `<span>${t}</span>`).join("");
   const items = (p.items || []).map(renderItem).join("");
+  // 실제로 열어볼 수 있는 결과물이 있으면 본문 맨 위에 바로가기 버튼을 놓습니다.
+  const link = p.link
+    ? `<a class="p-link" href="${p.link.href}" target="_blank" rel="noopener">
+         ${p.link.label || "바로가기"}<span aria-hidden="true">↗</span>
+       </a>`
+    : "";
   return `<details class="proj" id="project-${i + 1}">
       <summary>
         <span class="p-no">${no}</span>
@@ -101,7 +107,7 @@ function renderProject(p, i) {
         </span>
         <span class="p-meta">${meta}</span>
       </summary>
-      <div class="p-body">${items}</div>
+      <div class="p-body">${link}${items}</div>
     </details>`;
 }
 

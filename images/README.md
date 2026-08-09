@@ -44,7 +44,8 @@
 | `hdhs/homeshop_list.webp` | 홈쇼핑 편성 조회 (분류별) |
 | `hdhs/fixedpgm.webp` | 고정 PGM 편성표 |
 | `hdhs/celebrity.webp` | 셀럽 PGM 조회 |
-| `hdhs/industry.webp` | 시간대별 편성 히트맵 · 인사이트 |
+| `hdhs/industry.webp` | 편성맵 — 시간대별 히트맵 · 인사이트 |
+| `hdhs/health-tracker.webp` | 건강프로그램 추적 |
 | `hdhs/schedule.webp` | 지상파 · 종편 편성표 |
 | `hdhs/dramavariety.webp` | 드라마 · 예능 편성 및 시청률 |
 | `hdhs/ranking.webp` | 주간 랭킹 |
