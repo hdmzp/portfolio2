@@ -23,11 +23,10 @@
 | `p2-1-sql.png` | 실적 집계 쿼리 |
 | `p2-1-dashboard-live.png` | Power BI · 기간별 사업부/팀 실적 조회 |
 | `p2-1-dashboard-brand.png` | Power BI · 협력사/브랜드별 실적 조회 |
-| `p2-1-dashboard-raw.png` | Power BI · 방송 실적 RAW 데이터 |
 | `p2-1-team-pgm.png` | 팀 · 사업부 PGM 효율 조회 |
 | `p2-1-daily-trend.png` | 일자별 추이 조회 |
-| `p2-1-fixedpgm-1.png` `p2-1-fixedpgm-2.png` | 고정 PGM 실적 조회 ① ② |
-| `p2-1-fashion-1.png` `p2-1-fashion-2.png` | 패션잡화 PGM 실적 조회 ① ② |
+| `p2-1-fixedpgm-1.png` `p2-1-fixedpgm-2.png` | 고정 PGM 실적 조회 (한 카드에 2장) |
+| `p2-1-fashion-1.png` | 패션잡화 PGM 실적 조회 |
 | `p2-1-conversion.png` | 방송코드별 실제 구매전환율 조회 |
 | `p2-1-conversion-raw.png` | 구매전환율 RAW 데이터 |
 
