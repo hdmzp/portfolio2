@@ -79,8 +79,8 @@ function renderItem(it, idx, projectNo) {
   const diagram = it.diagram && DIAGRAMS[it.diagram] ? DIAGRAMS[it.diagram] : "";
   const shots = it.shots && it.shots.length
     ? `<div class="mini-label">예시 이미지</div><div class="shots">${it.shots.map(renderShot).join("")}</div>` : "";
-  // 항목도 프로젝트와 같은 방식으로 접었다 펼 수 있습니다 (기본은 펼침).
-  return `<details class="item" open id="item-${projectNo}-${idx + 1}">
+  // 항목도 프로젝트와 같은 방식으로 접혀 있다가, 클릭하면 펼쳐집니다.
+  return `<details class="item" id="item-${projectNo}-${idx + 1}">
       <summary class="item-head">
         ${it.no ? `<span class="item-no">${it.no}</span>` : ""}
         <span class="item-title">${it.title}</span>
@@ -121,12 +121,12 @@ function renderProject(p, i) {
 const list = document.getElementById("projectList");
 list.innerHTML = PROJECTS.map(renderProject).join("");
 
-// 전체 펼치기·접기는 프로젝트만 대상으로 합니다 (항목은 그대로 유지).
+// 프로젝트와 세부 항목을 한 번에 펼치고 접습니다.
 document.getElementById("expandAll").addEventListener("click", () => {
-  list.querySelectorAll("details.proj").forEach(d => d.open = true);
+  list.querySelectorAll("details").forEach(d => d.open = true);
 });
 document.getElementById("collapseAll").addEventListener("click", () => {
-  list.querySelectorAll("details.proj").forEach(d => d.open = false);
+  list.querySelectorAll("details").forEach(d => d.open = false);
 });
 
 // 주소창에 #project-2 같은 해시가 있으면 해당 프로젝트를 펼쳐 줍니다.

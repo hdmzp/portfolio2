@@ -195,7 +195,8 @@ section { padding: 52px 0 4px; }
 }
 .chev { width: 11px; height: 11px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
   transform: rotate(45deg) translate(-2px,-2px); transition: transform .2s; flex: none; }
-.proj[open] .chev { transform: rotate(225deg) translate(-1px,-1px); }
+/* 자기 요약줄의 화살표만 뒤집습니다 (하위 항목 화살표까지 돌아가지 않도록 직계 자식으로 한정) */
+.proj[open] > summary .chev { transform: rotate(225deg) translate(-1px,-1px); }
 @media (max-width: 640px) {
   .proj > summary { padding: 16px 16px; grid-template-columns: auto 1fr auto; }
   .p-title { font-size: 15.5px; }
