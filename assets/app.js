@@ -48,9 +48,14 @@ function renderMetric(m) {
 
 function renderShot(s) {
   const desc = (s.desc || []).map(d => `<li>${d}</li>`).join("");
-  // 이미지가 아직 없으면 onerror 로 자리표시자만 남습니다.
+  // 이미지가 있으면 로드 후 자리표시자를 지우고, 없으면 이미지 태그 쪽을 지웁니다.
+  // 표·대시보드 캡처는 카드 안에서 작게 보이므로 클릭하면 원본 크기로 열립니다.
   const img = s.src
-    ? `<img src="${s.src}" alt="${s.title || ""}" loading="lazy" onerror="this.remove()">`
+    ? `<a class="zoom" href="${s.src}" target="_blank" rel="noopener" title="클릭하면 원본 크기로 열립니다">
+         <img src="${s.src}" alt="${s.title || ""}" loading="lazy"
+              onload="this.closest('.shot-img').querySelector('.ph')?.remove()"
+              onerror="this.closest('.zoom').remove()">
+       </a>`
     : "";
   return `<div class="shot">
       <div class="shot-img">
