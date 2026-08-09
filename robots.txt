@@ -1,3 +1,40 @@
-# 검색엔진 색인 차단 — 링크를 직접 받은 사람만 열람
+# 검색엔진 색인 차단 — 링크를 직접 받은 사람만 열람합니다.
+# 다만 메신저·SNS 의 '링크 미리보기' 봇은 허용해야 공유했을 때 대표 이미지가 보입니다.
+
+# 메신저 · SNS 링크 미리보기 봇 (색인이 아니라 미리보기 카드만 생성합니다)
+User-agent: kakaotalk-scrap
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: facebookcatalog
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Line
+Allow: /
+
+# 그 외 모든 크롤러(검색엔진 포함) 차단
 User-agent: *
 Disallow: /
