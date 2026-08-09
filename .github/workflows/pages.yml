@@ -25,10 +25,10 @@ jobs:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
 
-      - name: Pages 설정 (비활성 상태면 자동 활성화)
+      # Pages 최초 활성화는 저장소 Settings → Pages 에서 한 번 해줘야 합니다.
+      # (워크플로 토큰에는 Pages 생성 권한이 없어 자동 활성화가 불가능)
+      - name: Pages 설정 확인
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: 사이트 파일 업로드
         uses: actions/upload-pages-artifact@v3
