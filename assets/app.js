@@ -147,12 +147,52 @@ function renderBlock(b) {
 }
 
 function renderMetric(m) {
+  // now 를 숫자로 적으면 '작년 → 현재 → 목표' 막대가 있는 카드로 그려집니다.
+  if (typeof m.now === "number") return renderTrackMetric(m);
   const dir = m.dir ? ` ${m.dir}` : "";
   const from = m.from ? `<span class="m-from">${m.from}</span><span class="m-arrow">→</span>` : "";
   return `<div class="metric${dir}">
       <div class="m-label">${m.label}</div>
       <div class="m-value">${from}<span class="m-to">${m.to}</span></div>
       ${m.note ? `<div class="m-note">${m.note}</div>` : ""}
+    </div>`;
+}
+
+/* 낮을수록 좋은 지표(저효율 PGM 등)를 막대로 보여줍니다.
+     연한 막대 = 작년 결과 (base, 없어도 됩니다)
+     진한 막대 = 현재 (now)
+     세로 점선 = 목표 (goal) — 막대가 점선보다 짧으면 목표 달성            */
+function renderTrackMetric(m) {
+  const u = m.unit || "%";
+  const base = typeof m.base === "number" ? m.base : null;
+  const goal = typeof m.goal === "number" ? m.goal : null;
+  const now = m.now;
+
+  // 막대 눈금의 끝 — 가장 큰 값보다 조금 여유를 둡니다
+  const max = Math.max(base || 0, now, goal || 0) * 1.2 || 1;
+  const w = v => (v / max * 100).toFixed(1) + "%";
+
+  const done = goal !== null && now <= goal;
+  // 부동소수점 오차를 없애기 위해 소수 첫째 자리에서 반올림합니다 (14 - 13 = 1)
+  const gap = goal === null ? null : Math.round((now - goal) * 10) / 10;
+
+  // 화살표까지 한 덩어리로 묶어 '작년 값' 줄이 통째로 위에 오도록 합니다
+  const from = base === null ? ""
+    : `<span class="m-from">${m.baseLabel ? m.baseLabel + " " : ""}${base}${u} <span class="m-arrow">→</span></span>`;
+  const ghost = base === null ? "" : `<span class="m-bar base" style="width:${w(base)}"></span>`;
+  const mark = goal === null ? "" : `<span class="m-goal" style="left:${w(goal)}"></span>`;
+  const foot = goal === null ? ""
+    : `<div class="m-foot">
+        <span>${m.goalLabel || "목표"} ${goal}${u} ↓</span>
+        <span class="m-chip${done ? " done" : ""}">${done ? "달성" : gap + "%p 남음"}</span>
+      </div>`;
+
+  return `<div class="metric track${done ? " done" : ""}">
+      <div class="m-label">${m.label}</div>
+      <div class="m-value">${from}<span class="m-to">${now}${u}</span></div>
+      <div class="m-track">${ghost}<span class="m-bar now" style="width:${w(now)}"></span>${mark}</div>
+      ${m.note ? `<div class="m-note">${m.note}</div>` : ""}
+      ${foot}
     </div>`;
 }
 
