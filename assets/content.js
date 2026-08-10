@@ -718,19 +718,11 @@ const PROJECTS = [
         ],
         shots: [
           {
-            src: "images/p4-2-sms.png",
-            title: "사전 모니터링 자동 알림",
+            src: "images/p4-2-onair.png",
+            title: "사전 모니터링 알림 · 긴급 On-AIR 기능",
             desc: [
-              "심야방송 편성상품 코드를 매일 자동 점검",
-              "일시중단 코드 활성화 내역을 시스템 SMS · 알림톡으로 자동 통보"
-            ]
-          },
-          {
-            src: ["images/p4-2-screen.png", "images/p4-2-popup.png"],
-            title: "긴급 On-AIR 기능",
-            desc: [
-              "일자별 데이터방송편성 화면에 긴급 On-AIR 버튼 구현",
-              "클릭 시점에 방송 중인 상품 코드를 일시중단 → 진행으로 전환해 강제 개방"
+              "심야방송 편성상품 코드를 매일 자동 점검하고 일시중단 내역을 SMS · 알림톡으로 자동 통보",
+              "긴급 On-AIR 클릭 시점에 방송 중인 상품 코드를 일시중단 → 진행으로 전환해 강제 개방"
             ]
           }
         ]
