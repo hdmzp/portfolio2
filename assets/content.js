@@ -643,7 +643,7 @@ const PROJECTS = [
     badge: "AI 활용력",
     tag: "개인",
     tone: "personal",
-    period: "진행 중",
+    period: "2026.06 ~ 진행중",
     summary: "홈쇼핑 16개 채널 + 지상파·종편 시청환경을 한 화면에서 조회하는 서비스",
     link: { href: "https://hdmzp.github.io/hdhs/", label: "사이트 바로가기" },
     items: [
@@ -757,6 +757,7 @@ const PROJECTS = [
 
   {
     title: "노인 무임승차와 지하철 적자 실증 분석",
+    badge: "데이터 분석",
     tag: "개인",
     tone: "personal",
     period: "2026.04 ~ 2026.06 (3개월)",

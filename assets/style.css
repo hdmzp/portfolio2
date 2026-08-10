@@ -110,6 +110,8 @@ img { max-width: 100%; display: block; }
 
 /* 툴 칩 */
 .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+/* 좁은 화면에서는 첫 화면 전체가 가운데 정렬이므로 배지도 함께 가운데로 */
+@media (max-width: 700px) { .tools { justify-content: center; } }
 /* 사용 도구 배지 — 연한 하늘색 배경으로 눈에 띄게 */
 .tool {
   background: color-mix(in srgb, var(--accent) 11%, var(--surface));
