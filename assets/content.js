@@ -640,12 +640,12 @@ const PROJECTS = [
     title: "&lt;홈쇼핑 시청환경 조회&gt; 사이트 구축",
     badge: "AI 활용력",
     tag: "개인",
+    tone: "personal",
     period: "진행 중",
     summary: "홈쇼핑 11개사 + 지상파·종편 시청환경을 한 화면에서 조회하는 서비스",
     link: { href: "https://hdmzp.github.io/hdhs/", label: "사이트 바로가기" },
     items: [
       {
-        no: "4-1",
         title: "사이트 소개",
         blocks: [
           {
