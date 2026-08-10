@@ -129,7 +129,11 @@ document.getElementById("navBar").innerHTML = `
 /* ============================================================
    프로젝트 렌더링
    ============================================================ */
-const KEY_CLASS = { "문제": "problem", "실행": "action", "성과": "result" };
+const KEY_CLASS = {
+  "문제": "problem", "실행": "action", "성과": "result",
+  // 프로젝트마다 머리말이 조금씩 다를 수 있어, 비슷한 뜻이면 같은 색을 씁니다.
+  "기획 배경": "problem", "실행 및 성과": "result", "주요 기능 및 화면": "action"
+};
 
 function renderBlock(b) {
   const cls = KEY_CLASS[b.k] || "action";

@@ -253,11 +253,11 @@ section { padding: 52px 0 4px; }
 
 /* [문제] [실행] [성과] 블록 */
 .blocks { margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }
-.blk { display: grid; grid-template-columns: 62px 1fr; gap: 14px; align-items: start; }
+.blk { display: grid; grid-template-columns: 92px 1fr; gap: 14px; align-items: start; }
 @media (max-width: 640px) { .blk { grid-template-columns: 1fr; gap: 6px; } }
 .blk-k {
-  font-size: 11.5px; font-weight: 800; text-align: center;
-  border-radius: 7px; padding: 4px 0; margin-top: 2px; justify-self: start; min-width: 62px;
+  font-size: 11.5px; font-weight: 800; text-align: center; word-break: keep-all;
+  border-radius: 7px; padding: 4px 6px; margin-top: 2px; justify-self: start; min-width: 62px;
 }
 .blk-k.problem { color: var(--danger); background: color-mix(in srgb, var(--danger) 10%, transparent); }
 .blk-k.action  { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
