@@ -325,7 +325,7 @@ const PROJECTS = [
             tech: ["Power BI", "MySQL", "Snowflake"],
             lines: [
               "<b>대시보드 구축 및 배포</b> : KPI, 담당부서별 데이터 조회를 위한 쿼리 설계 및 대시보드 시각화",
-              "종류 : ① 매체별 PGM 실적, ② 상품코드별 구매전환율, ③ 고정 프로그램 운영, ④ 패션 · 식품 등 카테고리별 실적 등"
+              "종류 : ① 매체별 PGM 실적, ② 상품코드별 구매전환율, ③ 고정 프로그램 운영, ④ 패션 · 식품 등 카테고리별 실적, ⑤ 동업계 실적 등"
             ]
           },
           {
@@ -370,6 +370,15 @@ const PROJECTS = [
               "전환율 · 취소율 · 반품률과 평균 판매가를 함께 조회",
               "판매상품코드별 예상 전환율을 설정해 예상 매출 · 공헌이익 산출"
             ]
+          },
+          {
+            src: "images/p2-1-competitor.png",
+            title: "동업계 실적 조회",
+            desc: [
+              "방송 일자별 · 브랜드별 상세 실적 조회 — 종료시각 · 프로그램 정보 · 상품분류 · 실적 등 세부 지표 포함",
+              "경쟁사 · 외형구분 · 주중/주말 등 필터 조합으로 필요한 데이터를 손쉽게 조회",
+              "월 마감 편성비중과 순주문 실적을 카테고리별로 비교"
+            ]
           }
         ]
       },
@@ -408,6 +417,7 @@ const PROJECTS = [
         metrics: [
           { label: "월 선편성 비중", from: "15%", to: "40%", note: "조기 편성 시스템 도입 후 확대", dir: "up" }
         ],
+        diagram: "preplan",
         shots: [
           {
             src: "images/p2-2-calendar.png",
@@ -705,6 +715,24 @@ const PROJECTS = [
         metrics: [
           { label: "오류 사전 감지", from: "월 4건", to: "월 65건", note: "16배 강화", dir: "up" },
           { label: "주문 불가 사례", to: "-70%", note: "월 평균 기준", dir: "down" }
+        ],
+        shots: [
+          {
+            src: "images/p4-2-sms.png",
+            title: "사전 모니터링 자동 알림",
+            desc: [
+              "심야방송 편성상품 코드를 매일 자동 점검",
+              "일시중단 코드 활성화 내역을 시스템 SMS · 알림톡으로 자동 통보"
+            ]
+          },
+          {
+            src: ["images/p4-2-screen.png", "images/p4-2-popup.png"],
+            title: "긴급 On-AIR 기능",
+            desc: [
+              "일자별 데이터방송편성 화면에 긴급 On-AIR 버튼 구현",
+              "클릭 시점에 방송 중인 상품 코드를 일시중단 → 진행으로 전환해 강제 개방"
+            ]
+          }
         ]
       },
       {
@@ -868,9 +896,30 @@ const PROJECTS = [
 ];
 
 /* ============================================================
-   ③ 특수 도식 : 방송 META × 상품 META JOIN
+   ③ 특수 도식 : 방송 META × 상품 META JOIN · 기존 선편성 프로세스
    ============================================================ */
 const DIAGRAMS = {
+  preplan: `
+    <div class="flow">
+      <div class="flow-title">기존 선편성 프로세스</div>
+      <div class="flow-steps">
+        <div class="flow-step"><em>매월 마지막 주</em>익월 선편성 요청상품<br>팀별 엑셀 취합</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><em>익월 첫째 주</em>각 영업팀 편성담당자<br>회의 통해 일정 조율</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><em>조율 이후</em>일부 확정분만<br>시스템 캘린더에 입력</div>
+      </div>
+      <div class="flow-issues">
+        <h5>기존 프로세스의 한계</h5>
+        <ul>
+          <li>시스템 캘린더는 열람만 가능해 일정 파악에 그침</li>
+          <li>월초 이후 변경 건은 수정 미반영</li>
+          <li>팀 · 브랜드 · 상품 검색 / 조회 불가</li>
+          <li>비효율로 선편성 확대에 한계</li>
+        </ul>
+      </div>
+    </div>`,
+
   join: `
     <div class="join">
       <div class="join-top">
