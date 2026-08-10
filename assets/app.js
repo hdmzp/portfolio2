@@ -211,10 +211,11 @@ function renderShot(s) {
   if (!list.length) return `<div class="shot no-img">${txt}</div>`;
 
   // 표·대시보드 캡처는 카드 안에서 작게 보이므로, 클릭하면 확대해서 봅니다.
+  // 파일이 없는 이미지는 칸을 지우고, 전부 없으면 이미지 영역째 지워 설명만 넓게 보이게 합니다
   const imgs = list.map(src => `
       <button type="button" class="shot-img zoom" data-full="${src}" title="클릭하면 크게 보기">
         <img src="${src}" alt="${s.title || ""}" loading="lazy"
-             onerror="this.closest('.shot-img').remove()">
+             onerror="var w=this.closest('.shot-imgs');this.closest('.shot-img').remove();if(w&&!w.querySelector('.shot-img'))w.remove()">
       </button>`).join("");
   return `<div class="shot">
       <div class="shot-imgs">${imgs}</div>
