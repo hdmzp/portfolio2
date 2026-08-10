@@ -351,6 +351,20 @@ section { padding: 52px 0 4px; }
 .shot-txt li + li { margin-top: 6px; }
 .shot-txt li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 4px; height: 4px; border-radius: 50%; background: var(--grid); }
 
+/* 화면이 좁으면 이미지와 설명이 위아래로 쌓입니다.
+   이때 제목이 이미지 사이에 끼면 어느 이미지의 제목인지 헷갈리므로,
+   제목을 맨 위로 올려 '여기서부터 새 카드'임을 알려줍니다.
+     순서 →  제목 · 이미지 · 설명
+   (이 규칙은 위의 .shot-txt 규칙보다 뒤에 있어야 적용됩니다) */
+@media (max-width: 760px) {
+  .shot-txt { display: contents; }
+  .shot-txt h4 { order: 1; }
+  .shot-imgs { order: 2; }
+  .shot-txt ul { order: 3; }
+  /* 카드 사이 간격을 이미지 사이 간격(10px)보다 넓혀 경계를 분명히 합니다 */
+  .shots { gap: 34px; }
+}
+
 /* 섹션 라벨 (PPT의 선 + 텍스트) */
 .mini-label {
   margin-top: 22px; padding-top: 10px; border-top: 1px solid var(--grid);
