@@ -758,7 +758,7 @@ const PROJECTS = [
     tag: "개인",
     tone: "personal",
     period: "2026.04 ~ 2026.06 (3개월)",
-    summary: "성균관대학교 소프트웨어융합대학원 데이터사이언스융합학과 「데이터분석언어」 프로젝트",
+    summary: "성균관대 데이터사이언스융합학과 데이터분석 프로젝트",
     link: { href: "https://hdmzp.github.io/subway/", label: "사이트 바로가기" },
     items: []
   }
