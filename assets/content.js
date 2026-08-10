@@ -642,7 +642,7 @@ const PROJECTS = [
     tag: "개인",
     tone: "personal",
     period: "진행 중",
-    summary: "홈쇼핑 11개사 + 지상파·종편 시청환경을 한 화면에서 조회하는 서비스",
+    summary: "홈쇼핑 14개 채널 + 지상파·종편 시청환경을 한 화면에서 조회하는 서비스",
     link: { href: "https://hdmzp.github.io/hdhs/", label: "사이트 바로가기" },
     items: [
       {
@@ -681,7 +681,7 @@ const PROJECTS = [
             src: ["images/hdhs/homeshop.webp", "images/hdhs/homeshop_list.webp"],
             title: "홈쇼핑 편성 조회 (시간대별 · 분류별)",
             desc: [
-              "시간대별 · 카테고리별 편성 비교 및 사업자별 필터링 제공"
+              "시간대별 · 카테고리별 편성 비교 및 채널별 필터링 제공"
             ]
           },
           {
@@ -744,7 +744,7 @@ const PROJECTS = [
             src: "images/hdhs/lavangba.webp",
             title: "홈쇼핑 방송 실적 (라방바)",
             desc: [
-              "외부 데이터의 매출액에 <b>카테고리 · 가격대별 예상 전환율을 곱해 순주문을 추정</b>",
+              "방송 편성과 매출액을 크롤링해 <b>카테고리 · 가격대별 예상 전환율을 곱해 순주문을 추정</b>",
               "상품명 검색, 정규 / 심야 구분, 엑셀파일 다운로드 기능 지원"
             ]
           }
