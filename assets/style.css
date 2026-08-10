@@ -209,6 +209,8 @@ section { padding: 52px 0 4px; }
   color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent);
   border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
 }
+/* 기간 앞의 작은 뱃지 — 넓은 화면에서는 오른쪽 뱃지가 있으므로 숨깁니다 */
+.p-badge.mini { display: none; }
 .chev { width: 11px; height: 11px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
   transform: rotate(45deg) translate(-2px,-2px); transition: transform .2s; flex: none; }
 /* 자기 요약줄의 화살표만 뒤집습니다 (하위 항목 화살표까지 돌아가지 않도록 직계 자식으로 한정) */
@@ -217,6 +219,8 @@ section { padding: 52px 0 4px; }
   .proj > summary { padding: 16px 16px; grid-template-columns: auto 1fr auto; }
   .p-title { font-size: 15.5px; }
   .p-badge { display: none; }
+  /* 좁은 화면에서는 기간 앞의 작은 뱃지(p-badge mini)로 대신 보여줍니다 */
+  .p-badge.mini { display: inline-block; font-size: 10.5px; padding: 2px 9px; }
 }
 
 /* 개인 프로젝트 카드 — 회사 프로젝트(1~4)와 구분되도록 색을 달리합니다.

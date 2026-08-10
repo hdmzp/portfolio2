@@ -246,7 +246,10 @@ function renderItem(it, idx, projectNo) {
 
 function renderProject(p, i) {
   const no = String(i + 1).padStart(2, "0");
-  const meta = [p.period, p.summary].filter(Boolean).map(t => `<span>${t}</span>`).join("");
+  // 뱃지는 넓은 화면에서는 오른쪽 끝에, 좁은 화면에서는 기간 앞에 놓입니다.
+  // (좁은 화면에서 오른쪽에 두면 제목이 지나치게 눌리므로 자리를 옮깁니다)
+  const metaBadge = p.badge ? `<span class="p-badge mini">${p.badge}</span>` : "";
+  const meta = metaBadge + [p.period, p.summary].filter(Boolean).map(t => `<span>${t}</span>`).join("");
   const items = (p.items || []).map((it, k) => renderItem(it, k, i + 1)).join("");
   // 실제로 열어볼 수 있는 결과물이 있으면 본문 맨 위에 바로가기 버튼을 놓습니다.
   const link = p.link
