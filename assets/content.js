@@ -161,7 +161,7 @@ const SITE = {
 const PROJECTS = [
   {
     title: "홈쇼핑 TV 라이브방송 편성 및 상품 포트폴리오 관리",
-    badge: "운영",
+    badge: "전략 · 성과관리",
     period: "2024.11 ~ 현재",
     summary: "전략적 카테고리 믹스를 통한 채널 효율 극대화",
     items: [
@@ -246,7 +246,7 @@ const PROJECTS = [
 
   {
     title: "데이터 분석 인프라 구축",
-    badge: "데이터분석",
+    badge: "데이터 모델링",
     period: "2024.11 ~ 현재",
     summary: "시스템 기반의 Data-Driven 의사결정 체계 구축",
     items: [
@@ -449,7 +449,7 @@ const PROJECTS = [
 
   {
     title: "업무 자동화 프로그램 운용",
-    badge: "업무 자동화",
+    badge: "프로세스 자동화",
     period: "진행 중",
     summary: "반복 집계 · 보고 업무를 프로그램 5종으로 대체",
     items: [
@@ -757,7 +757,7 @@ const PROJECTS = [
 
   {
     title: "노인 무임승차와 지하철 적자 실증 분석",
-    badge: "데이터 분석",
+    badge: "통계 분석",
     tag: "개인",
     tone: "personal",
     period: "2026.04 ~ 2026.06 (3개월)",
