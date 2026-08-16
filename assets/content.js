@@ -138,6 +138,8 @@ const SITE = {
      period:  "2024.11 ~ 현재",        // 생략 가능
      summary: "접혀 있을 때 보이는 한 줄 요약",  // 생략 가능
      link:    { href: "https://...", label: "사이트 바로가기" },  // 생략 가능
+     file:    { href: "docs/xxx.pdf", label: "소개서 다운로드",     // 생략 가능
+                name: "내려받을때_파일이름.pdf" },                  //   (버튼이 link 옆에 붙습니다)
      items: [ ...세부 항목... ]
    }
 
@@ -766,6 +768,7 @@ const PROJECTS = [
     period: "2026.06 ~ 진행중",
     summary: "홈쇼핑 16개 채널 + 지상파·종편 시청환경을 한 화면에서 조회하는 서비스",
     link: { href: "https://hdmzp.github.io/hdhs/", label: "사이트 바로가기" },
+    file: { href: "docs/hdhs-intro.pdf", label: "소개서 다운로드", name: "홈쇼핑_시청환경조회_소개서.pdf" },
     items: [
       {
         title: "사이트 소개",

@@ -253,11 +253,20 @@ function renderProject(p, i) {
   const meta = metaBadge + [p.period, p.summary].filter(Boolean).map(t => `<span>${t}</span>`).join("");
   const items = (p.items || []).map((it, k) => renderItem(it, k, i + 1)).join("");
   // 실제로 열어볼 수 있는 결과물이 있으면 본문 맨 위에 바로가기 버튼을 놓습니다.
-  const link = p.link
-    ? `<a class="p-link" href="${p.link.href}" target="_blank" rel="noopener">
-         ${p.link.label || "바로가기"}<span aria-hidden="true">↗</span>
-       </a>`
-    : "";
+  // 소개 자료(PDF 등)가 있으면 그 옆에 내려받기 버튼을 나란히 놓습니다.
+  const buttons = [
+    p.link
+      ? `<a class="p-link" href="${p.link.href}" target="_blank" rel="noopener">
+           ${p.link.label || "바로가기"}<span aria-hidden="true">↗</span>
+         </a>`
+      : "",
+    p.file
+      ? `<a class="p-link ghost" href="${p.file.href}" download="${p.file.name || ""}">
+           ${p.file.label || "자료 다운로드"}<span aria-hidden="true">↓</span>
+         </a>`
+      : ""
+  ].filter(Boolean).join("");
+  const link = buttons ? `<div class="p-links">${buttons}</div>` : "";
   // tone 이 있으면 카드 색을 달리합니다 (예: 개인 프로젝트 → .personal)
   const tone = p.tone ? ` ${p.tone}` : "";
   // tag 는 제목 옆에 붙는 작은 표식입니다 (예: 개인)

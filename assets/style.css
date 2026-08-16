@@ -235,15 +235,25 @@ section { padding: 52px 0 4px; }
 .p-body { padding: 0 22px 24px; border-top: 1px solid var(--grid); margin-top: 2px; padding-top: 4px; }
 @media (max-width: 640px) { .p-body { padding: 4px 16px 20px; } }
 
-/* 결과물 바로가기 버튼 */
+/* 결과물 바로가기 · 자료 다운로드 버튼 */
+.p-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 .p-link {
-  display: inline-flex; align-items: center; gap: 7px; margin-top: 20px;
+  display: inline-flex; align-items: center; gap: 7px;
   font-size: 13.5px; font-weight: 750; color: #fff; background: var(--accent);
   border-radius: 999px; padding: 9px 18px;
 }
 .p-link:hover { text-decoration: none; filter: brightness(1.08); }
 .p-link span { font-size: 12px; }
-.p-link + .item { padding-top: 20px; }
+/* 보조 버튼 — 사이트 바로가기 옆에서 튀지 않도록 테두리형으로 둡니다 */
+.p-link.ghost {
+  color: var(--accent); background: transparent;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.p-link.ghost:hover {
+  filter: none; border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.p-links + .item { padding-top: 20px; }
 
 /* 세부 항목 (1-1, 1-2 ...) — 프로젝트처럼 접었다 펼 수 있습니다 */
 .item { padding-top: 8px; }
