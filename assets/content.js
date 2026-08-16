@@ -464,6 +464,7 @@ const PROJECTS = [
     badge: "프로세스 자동화",
     period: "진행 중",
     summary: "반복 집계 · 보고 업무를 프로그램 5종으로 대체",
+    file: { href: "docs/automation-intro.pdf", label: "소개서 다운로드", name: "업무자동화_프로그램_소개서.pdf" },
     items: [
       {
         no: "3-1",
