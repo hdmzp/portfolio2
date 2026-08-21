@@ -97,7 +97,7 @@ document.getElementById("navBar").innerHTML = `
 
   // 학력이 비어 있으면 '학력' 제목까지 통째로 나오지 않습니다
   const edu = (c.education || []).length
-    ? `<div class="sec-head edu-head">
+    ? `<div class="sec-head edu-head" id="education">
          <div class="sec-label">${c.eduLabel}</div>
          <h2>${c.eduHeading}</h2>
        </div>

@@ -33,6 +33,7 @@ const SITE = {
     links: [
       { href: "#about",    label: "소개" },
       { href: "#career",   label: "경력" },
+      { href: "#education", label: "학력" },
       { href: "#projects", label: "프로젝트" }
     ]
   },

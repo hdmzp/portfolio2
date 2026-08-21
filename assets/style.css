@@ -165,10 +165,8 @@ section { padding: 52px 0 4px; }
   border-radius: 999px; padding: 3px 10px; white-space: nowrap;
 }
 
-/* 학력 — 경력 카드와 같은 격자를 쓰되 톤만 한 단계 낮춥니다 */
+/* 학력 제목 — 경력 제목과 같은 서식을 쓰고, 섹션 간격만큼 위 여백을 둡니다 */
 .sec-head.edu-head { margin-top: 52px; }
-.job.edu .j-period { color: var(--muted); }
-.job.edu .j-org { font-size: 15px; }
 
 /* ---------- 프로젝트 아코디언 ---------- */
 .proj-tools { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
