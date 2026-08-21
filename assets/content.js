@@ -105,6 +105,7 @@ const SITE = {
        ▸ 경력과 똑같은 칸(기간 / 학교·과정 / 오른쪽 표식)을 씁니다.
        ▸ tags 에 넣은 글자는 오른쪽에 알약 모양으로 붙습니다. (예: 학점)
        ▸ education 을 빈 [] 로 두면 '학력' 제목까지 통째로 사라집니다.       */
+    eduLabel: "EDUCATION",
     eduHeading: "학력",
     education: [
       {

@@ -97,7 +97,10 @@ document.getElementById("navBar").innerHTML = `
 
   // 학력이 비어 있으면 '학력' 제목까지 통째로 나오지 않습니다
   const edu = (c.education || []).length
-    ? `<h3 class="career-sub">${c.eduHeading}</h3>
+    ? `<div class="sec-head edu-head">
+         <div class="sec-label">${c.eduLabel}</div>
+         <h2>${c.eduHeading}</h2>
+       </div>
        <div class="career">${c.education.map(e => card(e, "job edu")).join("")}</div>`
     : "";
 
