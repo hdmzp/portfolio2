@@ -37,8 +37,7 @@ document.getElementById("navBar").innerHTML = `
   <div class="nav-links">
     ${SITE.nav.links.map(l => `<a href="${l.href}">${l.label}</a>`).join("")}
   </div>
-  <a class="nav-contact" target="_blank" rel="noopener"
-     href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${encodeURIComponent(SITE.nav.contactEmail)}">CONTACT</a>`;
+  <a class="nav-contact" href="mailto:${SITE.nav.contactEmail}">CONTACT</a>`;
 
 /* ---------- 첫 화면 ---------- */
 (function renderHero() {
