@@ -80,37 +80,25 @@ document.getElementById("navBar").innerHTML = `
     </div>`;
 })();
 
-/* ---------- 경력사항 · 학력 ---------- */
+/* ---------- 경력사항 ---------- */
 (function renderCareer() {
   const c = SITE.career;
-
-  // 경력 카드와 학력 카드가 같은 모양을 씁니다
-  const card = (j, cls = "job") => `
-    <div class="${cls}">
-      <div class="j-period">${j.period}</div>
-      <div>
-        <div class="j-org">${j.org}</div>
-        <div class="j-role">${j.role}</div>
-      </div>
-      <div class="j-tags">${(j.tags || []).map(t => `<span>${t}</span>`).join("")}</div>
-    </div>`;
-
-  // 학력이 비어 있으면 '학력' 제목까지 통째로 나오지 않습니다
-  const edu = (c.education || []).length
-    ? `<div class="sec-head edu-head" id="education">
-         <div class="sec-label">${c.eduLabel}</div>
-         <h2>${c.eduHeading}</h2>
-       </div>
-       <div class="career">${c.education.map(e => card(e, "job edu")).join("")}</div>`
-    : "";
-
   document.getElementById("careerBox").innerHTML = `
     <div class="sec-head">
       <div class="sec-label">${c.label}</div>
       <h2>${c.heading}</h2>
     </div>
-    <div class="career">${c.jobs.map(j => card(j)).join("")}</div>
-    ${edu}`;
+    <div class="career">
+      ${c.jobs.map(j => `
+        <div class="job">
+          <div class="j-period">${j.period}</div>
+          <div>
+            <div class="j-org">${j.org}</div>
+            <div class="j-role">${j.role}</div>
+          </div>
+          <div class="j-tags">${(j.tags || []).map(t => `<span>${t}</span>`).join("")}</div>
+        </div>`).join("")}
+    </div>`;
 })();
 
 /* ---------- 프로젝트 섹션 머리말 (목록 자체는 아래에서 채웁니다) ---------- */
