@@ -303,6 +303,7 @@ section { padding: 52px 0 4px; }
 .blk-k.problem { color: var(--danger); background: color-mix(in srgb, var(--danger) 10%, transparent); }
 .blk-k.action  { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
 .blk-k.result  { color: color-mix(in srgb, var(--s3) 80%, var(--ink)); background: color-mix(in srgb, var(--s3) 13%, transparent); }
+.blk-k.model   { color: var(--ink-2); background: color-mix(in srgb, var(--ink-2) 12%, transparent); }
 .blk ul { list-style: none; }
 .blk li { font-size: 14.2px; color: var(--ink-2); padding-left: 14px; position: relative; }
 .blk li + li { margin-top: 5px; }
