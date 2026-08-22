@@ -37,7 +37,41 @@ document.getElementById("navBar").innerHTML = `
   <div class="nav-links">
     ${SITE.nav.links.map(l => `<a href="${l.href}">${l.label}</a>`).join("")}
   </div>
-  <a class="nav-contact" href="mailto:${SITE.nav.contactEmail}">CONTACT</a>`;
+  <div class="nav-contact-wrap">
+    <button type="button" class="nav-contact" id="contactBtn" aria-haspopup="true" aria-expanded="false">CONTACT</button>
+    <div class="contact-pop" id="contactPop" hidden>
+      <a class="contact-pop-row" href="https://t.me/${SITE.nav.contactTelegram}" target="_blank" rel="noopener">
+        <svg class="contact-pop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        <span>${SITE.nav.contactTelegram}</span>
+      </a>
+      <a class="contact-pop-row" href="mailto:${SITE.nav.contactEmail}">
+        <svg class="contact-pop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
+        <span>${SITE.nav.contactEmail}</span>
+        <span class="contact-pop-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>`;
+
+/* CONTACT 뱃지 팝업 — 버튼 클릭으로 열고 닫고, 바깥을 클릭하거나 Esc 를 누르면 닫힙니다 */
+(function initContactPopup() {
+  const btn = document.getElementById("contactBtn");
+  const pop = document.getElementById("contactPop");
+  if (!btn || !pop) return;
+
+  const close = () => { pop.hidden = true; btn.setAttribute("aria-expanded", "false"); };
+  const open = () => { pop.hidden = false; btn.setAttribute("aria-expanded", "true"); };
+
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
+    pop.hidden ? open() : close();
+  });
+  document.addEventListener("click", e => {
+    if (!pop.hidden && !pop.contains(e.target) && e.target !== btn) close();
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && !pop.hidden) { close(); btn.focus(); }
+  });
+})();
 
 /* ---------- 첫 화면 ---------- */
 (function renderHero() {

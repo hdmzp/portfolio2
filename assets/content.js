@@ -35,8 +35,9 @@ const SITE = {
       { href: "#career",   label: "경력" },
       { href: "#projects", label: "프로젝트" }
     ],
-    /* 상단 메뉴 맨 오른쪽 검은 뱃지 — 누르면 새 창으로 Gmail 작성 화면이 열립니다 */
-    contactEmail: "mj2040354@gmail.com"
+    /* 상단 메뉴 맨 오른쪽 검은 뱃지 — 누르면 텔레그램·메일 연락처가 담긴 팝업이 열립니다 */
+    contactEmail: "mj2040354@gmail.com",
+    contactTelegram: "mj2040354"
   },
 
   /* ---------- 첫 화면 (이름 · 프로필) ---------- */

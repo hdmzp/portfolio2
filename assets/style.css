@@ -90,6 +90,27 @@ img { max-width: 100%; display: block; }
 :root[data-theme="dark"] .nav-contact { background: #fff; color: #111; }
 :root[data-theme="dark"] .nav-contact:hover { background: #e5e5e5; }
 
+/* CONTACT 뱃지 팝업 — 텔레그램 · 메일 연락처 */
+.nav-contact-wrap { position: relative; flex: none; }
+.nav-contact {
+  font: inherit; cursor: pointer; border: none;
+}
+.contact-pop {
+  position: absolute; top: calc(100% + 10px); right: 0; z-index: 60;
+  min-width: 250px; padding: 6px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+.contact-pop-row {
+  display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px;
+  font-size: 13.5px; color: var(--ink);
+}
+.contact-pop-row:hover { background: var(--page); text-decoration: none; }
+.contact-pop-icon { width: 17px; height: 17px; flex: none; color: var(--ink-2); }
+.contact-pop-row span:not(.contact-pop-arrow) { overflow-wrap: anywhere; }
+.contact-pop-arrow { margin-left: auto; flex: none; color: var(--muted); font-size: 12px; }
+@media (max-width: 480px) { .contact-pop { min-width: 200px; right: -6px; } }
+
 /* ---------- hero ---------- */
 .hero { padding: 64px 0 8px; }
 .hero-top { display: flex; align-items: center; gap: 32px; }
