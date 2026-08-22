@@ -134,7 +134,7 @@ const KEY_CLASS = {
   "문제": "problem", "실행": "action", "성과": "result",
   // 프로젝트마다 머리말이 조금씩 다를 수 있어, 비슷한 뜻이면 같은 색을 씁니다.
   "기획 배경": "problem", "실행 및 성과": "result", "주요 기능 및 화면": "action",
-  "주요 모델": "model"
+  "주요 모델": "model", "분석 설계": "action", "주요 분석 기법": "model"
 };
 
 function renderBlock(b) {
