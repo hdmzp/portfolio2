@@ -93,7 +93,7 @@ img { max-width: 100%; display: block; }
 /* CONTACT 뱃지 팝업 — 텔레그램 · 메일 연락처 */
 .nav-contact-wrap { position: relative; flex: none; }
 .nav-contact {
-  font: inherit; cursor: pointer; border: none;
+  font-family: inherit; cursor: pointer; border: none;
 }
 .contact-pop {
   position: absolute; top: calc(100% + 10px); right: 0; z-index: 60;
