@@ -173,7 +173,7 @@ const PROJECTS = [
       {
         no: "1-1",
         title: "저효율 방송 개선 캠페인 리딩 (3050 캠페인)",
-        period: "’26.01 ~ 현재",
+        period: "’26.01 ~ ’26.09 (진행중)",
         blocks: [
           {
             k: "문제",
@@ -194,19 +194,19 @@ const PROJECTS = [
           {
             k: "성과",
             lines: [
-              "<b>전체</b> — 순30% 미만 205개(7%) · P50% 미만 397개(13%)",
-              "<b>식품사업부</b> — 순30% 미만 63개(7%) · P50% 미만 112개(14%)"
+              "<b>전체</b> — 순30% 미만 314개(7.0%) · P50% 미만 589개(13.2%)",
+              "<b>식품사업부</b> — 순30% 미만 94개(7.6%) · P50% 미만 152개(12.3%)"
             ],
-            note: "※ ’26년 상반기 누적 기준 · 아래 카드에 작년 결과와 올해 목표를 함께 표시"
+            note: "※ ’26년 1~9월 누계 기준(1/1~9/13) · 아래 카드에 작년 동기 결과와 올해 목표를 함께 표시"
           }
         ],
         /* 낮을수록 좋은 지표입니다.
            base = 작년 결과, now = 현재, goal = 올해 목표 (숫자로 적으면 막대가 그려집니다) */
         metrics: [
-          { label: "전체 · 순30% 미만 PGM", now: 7, goal: 5, note: "205개", goalLabel: "’26년 목표" },
-          { label: "전체 · P50% 미만 PGM", now: 13, goal: 10, note: "397개", goalLabel: "’26년 목표" },
-          { label: "식품사업부 · 순30% 미만 PGM", base: 10.4, baseLabel: "’25년", now: 7, goal: 8, note: "63개", goalLabel: "’26년 목표" },
-          { label: "식품사업부 · P50% 미만 PGM", base: 17.7, baseLabel: "’25년", now: 14, goal: 13, note: "112개", goalLabel: "’26년 목표" }
+          { label: "전체 · 순30% 미만 PGM", now: 7.0, goal: 5, note: "314개", goalLabel: "’26년 목표" },
+          { label: "전체 · P50% 미만 PGM", now: 13.2, goal: 10, note: "589개", goalLabel: "’26년 목표" },
+          { label: "식품사업부 · 순30% 미만 PGM", base: 12.1, baseLabel: "’25년 동기", now: 7.6, goal: 8, note: "94개", goalLabel: "’26년 목표" },
+          { label: "식품사업부 · P50% 미만 PGM", base: 18.6, baseLabel: "’25년 동기", now: 12.3, goal: 13, note: "152개", goalLabel: "’26년 목표" }
         ]
       },
       {
