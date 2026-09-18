@@ -310,8 +310,11 @@ section { padding: 52px 0 4px; }
   border-radius: 6px; padding: 2px 8px; font-variant-numeric: tabular-nums;
 }
 .item-title { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
-.item-period { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; margin-left: auto; }
-@media (max-width: 640px) { .item-period { margin-left: 0; } }
+.item-period { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+/* 기간과 화살표를 한 덩어리로 묶어, 한 줄에 다 들어가지 않으면 둘이 함께 다음 줄로 내려갑니다
+   (화살표만 홀로 떨어지는 것을 막기 위함) */
+.item-meta { display: flex; align-items: baseline; gap: 12px; margin-left: auto; }
+@media (max-width: 640px) { .item-meta { margin-left: 0; } }
 
 /* [문제] [실행] [성과] 블록 */
 .blocks { margin-top: 14px; display: flex; flex-direction: column; gap: 12px; }

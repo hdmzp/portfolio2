@@ -271,8 +271,9 @@ function renderItem(it, idx, projectNo) {
       <summary class="item-head">
         ${it.no ? `<span class="item-no">${it.no}</span>` : ""}
         <span class="item-title">${it.title}</span>
-        ${it.period ? `<span class="item-period">${it.period}</span>` : ""}
-        <span class="chev"></span>
+        ${it.period
+          ? `<span class="item-meta"><span class="item-period">${it.period}</span><span class="chev"></span></span>`
+          : `<span class="chev"></span>`}
       </summary>
       <div class="item-body">
         <div class="blocks">${blocks}</div>
