@@ -146,6 +146,8 @@ img { max-width: 100%; display: block; }
 }
 .trait b { color: var(--ink); font-weight: 750; }
 .trait b::after { content: ""; display: inline-block; width: 1px; height: 11px; background: var(--grid); margin: 0 9px -1px; }
+.trait-link { font-weight: 700; margin-left: 2px; }
+.trait-link:hover { text-decoration: none; opacity: .7; }
 
 /* 툴 칩 */
 .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
