@@ -65,8 +65,7 @@ const SITE = {
       { use: "분석·가공·자동화", name: "Python" },
       { use: "시각화",           name: "Power BI" },
       { use: "시각화",           name: "MS Office" },
-      { use: "자동화",           name: "JavaScript" },
-      { use: "AI 활용 개발",     name: "Claude Code" }
+      { use: "자동화",           name: "JavaScript" }
     ]
   },
 
