@@ -94,7 +94,7 @@ document.getElementById("navBar").innerHTML = `
       </div>
     </div>
     <div class="traits">
-      ${h.traits.map(t => `<div class="trait"><b>${t.k}</b>${t.v}</div>`).join("")}
+      ${h.traits.map(t => `<div class="trait"><b>${t.k}</b>${t.v}${t.link ? `&nbsp;<a class="trait-link" href="${t.link.href}" title="${t.link.label}" aria-label="${t.link.label}">→</a>` : ""}</div>`).join("")}
     </div>
     <div class="tools">
       ${h.tools.map(t => `<span class="tool"><i>${t.use}</i>${t.name}</span>`).join("")}
@@ -173,7 +173,7 @@ const KEY_CLASS = {
 
 function renderBlock(b) {
   const cls = KEY_CLASS[b.k] || "action";
-  const tech = b.tech ? `<div class="tech">${b.tech.map(t => `<span>${t}</span>`).join("")}</div>` : "";
+  const tech = b.tech ? `<div class="tech">${b.tech.map(t => `<span${t === b.techKey ? ' class="key"' : ""}>${t}</span>`).join("")}</div>` : "";
   const lines = (b.lines || []).map(l => `<li>${l}</li>`).join("");
   const note = b.note ? `<div class="note">${b.note}</div>` : "";
   return `<div class="blk">
@@ -334,10 +334,17 @@ document.getElementById("collapseAll").addEventListener("click", () => {
 });
 
 // 주소창에 #project-2 같은 해시가 있으면 해당 프로젝트를 펼쳐 줍니다.
-if (location.hash) {
+// (페이지 안의 링크로 이동할 때도 똑같이 펼쳐집니다)
+// #item-3-4 처럼 세부 항목이면 감싸고 있는 프로젝트도 함께 펼칩니다.
+function openHashTarget() {
+  if (!location.hash) return;
   const t = document.querySelector(location.hash);
-  if (t && t.tagName === "DETAILS") { t.open = true; t.scrollIntoView(); }
+  if (!t || t.tagName !== "DETAILS") return;
+  for (let d = t; d; d = d.parentElement && d.parentElement.closest("details")) d.open = true;
+  t.scrollIntoView();
 }
+openHashTarget();
+window.addEventListener("hashchange", openHashTarget);
 
 /* ---------- 이미지 확대 보기 ----------
    캡처를 클릭하면 화면 전체에 크게 띄우고, 아래 방법으로 닫습니다.
