@@ -45,7 +45,7 @@ const SITE = {
     photo: "images/profile.png",   // 파일이 없으면 사진 칸이 사라집니다
     name: "박민지",
     role: "Business Analyst",
-    lede: "전체 경력 {년차}년차(만 {경력기간}) 데이터 분석가로, <b>AI로 업무 도구를 직접 만들어 현업에 적용</b>합니다.",
+    lede: "전체 경력 {년차}년차(만 {경력기간}) 데이터 분석가입니다.",
     contact: [
       "mj2040354@gmail.com",
       "현대홈쇼핑 라이브전략팀 재직",
