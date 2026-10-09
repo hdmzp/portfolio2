@@ -48,6 +48,12 @@ body {
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* 형광펜 — 글자 아래쪽 절반만 칠합니다 */
+mark { color: inherit; background: linear-gradient(transparent 52%, rgba(212, 255, 42, .75) 52%); padding: 0 1px; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) mark { background: linear-gradient(transparent 52%, rgba(212, 255, 42, .32) 52%); }
+}
+:root[data-theme="dark"] mark { background: linear-gradient(transparent 52%, rgba(212, 255, 42, .32) 52%); }
 img { max-width: 100%; display: block; }
 
 .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
