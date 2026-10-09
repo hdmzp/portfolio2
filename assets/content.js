@@ -48,8 +48,8 @@ const SITE = {
     lede: "전체 경력 {년차}년차(만 {경력기간}) 데이터 분석가로, <b>AI로 업무 도구를 직접 만들어 현업에 적용</b>합니다.",
     contact: [
       "mj2040354@gmail.com",
-      "현대홈쇼핑 라이브전략팀",
-      "성균관대 데이터사이언스융합학과 (석사 재학)"
+      "현대홈쇼핑 라이브전략팀 재직",
+      "성균관대 데이터사이언스융합학과 (석사 재학 중)"
     ],
     /* 역량 4가지 — 항목을 더 넣거나 빼도 됩니다 */
     traits: [
@@ -65,7 +65,8 @@ const SITE = {
       { use: "분석·가공·자동화", name: "Python" },
       { use: "시각화",           name: "Power BI" },
       { use: "시각화",           name: "MS Office" },
-      { use: "자동화",           name: "JavaScript" }
+      { use: "자동화",           name: "JavaScript" },
+      { use: "기획·자동화",      name: "AI LLM" }
     ]
   },
 
@@ -162,6 +163,8 @@ const SITE = {
    ▸ shots 의 src 파일이 아직 없으면 이미지 칸 없이 설명만 표시됩니다.
      (파일을 넣으면 다음 배포부터 이미지가 자동으로 나타납니다)
    ▸ lines 안에서는 <b>강조</b> 태그를 쓸 수 있습니다.
+   ▸ 블록에 techKey: "MySQL" 처럼 쓰면 그 도구만 형광색으로 표시됩니다.
+   ▸ 다른 항목으로 가는 링크 : <a class='jump' href='#item-3-4'>(프로젝트 3-4 참고)&nbsp;→</a>
    ============================================================ */
 
 const PROJECTS = [
@@ -188,8 +191,8 @@ const PROJECTS = [
             k: "역할",
             lines: [
               "Live방송 <b>3050 캠페인 운영현황 데이터 관리</b>",
-              "식품사업부 편성 담당자로서 저효율 PGM 감축 기여",
-              "운영현황 집계 · 보고 업무 자동화 (프로젝트 3-4 참고)"
+              "식품사업부 편성 담당자로서 저효율 PGM 감축",
+              "운영현황 집계 · 보고 업무 자동화 <a class='jump' href='#item-3-4'>(프로젝트 3-4 참고)&nbsp;→</a>"
             ]
           },
           {
@@ -226,7 +229,7 @@ const PROJECTS = [
             k: "실행",
             lines: [
               "<b>일반식품 편성 비중 40% 미만으로 관리</b>하며 기타 카테고리를 전략적으로 믹스",
-              "’26년 7월 &lt;오감쇼&gt; 운영방식 개편 → <b>카테고리별 편성비중 목표 새로 수립</b>"
+              "’26년 7월부로 &lt;오감쇼&gt; 운영방식 개편, <b>카테고리별 편성비중 등 목표 새로 수립</b> 진행 중"
             ]
           },
           {
@@ -274,6 +277,7 @@ const PROJECTS = [
           {
             k: "실행",
             tech: ["MySQL", "Snowflake", "Power BI"],
+            techKey: "MySQL",
             lines: [
               "방송 META + 상품 META <b>JOIN 쿼리 설계</b>",
               "동시노출 그룹 단위 실적 집계, 대표 상품 파악 등 복합 분석 쿼리 설계",
@@ -332,6 +336,7 @@ const PROJECTS = [
           {
             k: "실행",
             tech: ["Power BI", "MySQL", "Snowflake"],
+            techKey: "Power BI",
             lines: [
               "<b>대시보드 구축 및 배포</b> : KPI, 담당부서별 데이터 조회를 위한 쿼리 설계 및 대시보드 시각화",
               "종류 : ① 매체별 PGM 실적, ② 상품코드별 구매전환율, ③ 고정 프로그램 운영, ④ 패션 · 식품 등 카테고리별 실적, ⑤ 동업계 실적 등"
@@ -406,7 +411,8 @@ const PROJECTS = [
           },
           {
             k: "실행",
-            tech: ["Google Spreadsheet", "Apps Script"],
+            tech: ["MS Office", "Google Spreadsheet", "Apps Script"],
+            techKey: "MS Office",
             lines: [
               "전체 영업팀이 사용하는 통합 선편성 캘린더 설계 · 도입",
               "연간 방송 일정 조율 프로세스 간소화, 조기 편성 시스템 구축",
