@@ -944,7 +944,7 @@ const PROJECTS = [
     badge: "인과추론 분석",
     tag: "개인",
     tone: "personal",
-    period: "2026.07 ~ 현재",
+    period: "2026.07 ~ 2026.09",
     summary: "올리브영 판매 랭킹 영향 요인 분석 및 실증 검증",
     link: { href: "https://hdmzp.github.io/oliveyoung/", label: "사이트 바로가기" },
     items: [
