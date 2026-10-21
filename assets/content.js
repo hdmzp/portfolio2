@@ -44,7 +44,7 @@ const SITE = {
   hero: {
     photo: "images/profile.png",   // 파일이 없으면 사진 칸이 사라집니다
     name: "박민지",
-    role: "Business Analyst",
+    role: "Data Analyst",
     lede: "전체 경력 {년차}년차(만 {경력기간}) 데이터 분석가입니다.",
     contact: [
       "mj2040354@gmail.com",
@@ -75,7 +75,7 @@ const SITE = {
   about: {
     label: "ABOUT",
     heading: "자기소개",
-    title: "홈쇼핑 업계의 Business Analyst, 방송 편성 담당자",
+    title: "홈쇼핑 업계의 Data Analyst, 방송 편성 담당자",
     paragraphs: [
       "{년차}년차 홈쇼핑 방송 편성담당자입니다. 현대홈쇼핑은 2개의 TV채널(Live/Data) 및 모바일(Hmall) 플랫폼을 운영하며 <b>TV 채널 매출은 연간 1조 원</b>에 달합니다. 저는 라이브·데이터방송 채널 편성담당자로서 카테고리별 실적 관리와 상품 포트폴리오 조정을 통해 매출 극대화를 추진해 왔습니다.",
       "편성담당자는 단순한 <mark>방송 편성을 넘어 계획 수립, 방송 제작, 프로모션 기획 등 전방위적 운영에 깊이 관여</mark>하며, 홈쇼핑 방송의 길잡이 역할을 수행합니다. 비즈니스 문제를 정의하고 해결 방안을 제시할 뿐 아니라 직접 실행에 옮기는 주체입니다. 상품 생명주기가 짧은 홈쇼핑 유통 환경에서 <mark><b>‘문제 정의 → 데이터 기반 전략 수립 → 실행’</b>의 전 과정</mark>을 경험했으며, 어떤 도메인/조직에서도 빠르게 적응할 수 있는 실무형 역량을 갖추고 있습니다."
@@ -120,7 +120,7 @@ const SITE = {
 
   /* ---------- 맨 아래 ---------- */
   footer: {
-    name: "박민지 · Business Analyst",
+    name: "박민지 · Data Analyst",
     lines: [
       "mj2040354@gmail.com",
       "본 페이지는 개인 포트폴리오이며, 기재된 수치는 실제 업무 성과를 기반으로 작성되었습니다."
