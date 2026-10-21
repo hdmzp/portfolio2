@@ -1,5 +1,5 @@
 /* ==========================================================
-   박민지 · Data Analyst — Portfolio
+   박민지 · Data Analyst - Portfolio
    ========================================================== */
 :root {
   color-scheme: light;
@@ -48,7 +48,7 @@ body {
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-/* 형광펜 — 글자 아래쪽 절반만 칠합니다 */
+/* 형광펜 - 글자 아래쪽 절반만 칠합니다 */
 mark { color: inherit; background: linear-gradient(transparent 52%, rgba(212, 255, 42, .75) 52%); padding: 0 1px; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) mark { background: linear-gradient(transparent 52%, rgba(212, 255, 42, .32) 52%); }
@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
 :root[data-theme="dark"] .nav-contact { background: #fff; color: #111; }
 :root[data-theme="dark"] .nav-contact:hover { background: #e5e5e5; }
 
-/* CONTACT 뱃지 팝업 — 텔레그램 · 메일 연락처 */
+/* CONTACT 뱃지 팝업 - 텔레그램 · 메일 연락처 */
 .nav-contact-wrap { position: relative; flex: none; }
 .nav-contact {
   font-family: inherit; cursor: pointer; border: none;
@@ -162,7 +162,7 @@ img { max-width: 100%; display: block; }
 .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 /* 좁은 화면에서는 첫 화면 전체가 가운데 정렬이므로 배지도 함께 가운데로 */
 @media (max-width: 700px) { .tools { justify-content: center; } }
-/* 사용 도구 배지 — 연한 하늘색 배경으로 눈에 띄게 */
+/* 사용 도구 배지 - 연한 하늘색 배경으로 눈에 띄게 */
 .tool {
   background: color-mix(in srgb, var(--accent) 11%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent);
@@ -245,7 +245,7 @@ section { padding: 52px 0 4px; }
   display: grid; place-items: center; font-variant-numeric: tabular-nums;
 }
 .p-title { font-size: 17px; font-weight: 800; letter-spacing: -0.015em; line-height: 1.35; }
-/* 제목 옆 작은 표식 (개인 프로젝트 등) — 모바일에서도 계속 보입니다 */
+/* 제목 옆 작은 표식 (개인 프로젝트 등) - 모바일에서도 계속 보입니다 */
 .p-tag {
   display: inline-block; vertical-align: 2px; margin-left: 8px;
   font-size: 10px; font-weight: 750; line-height: 1.5; letter-spacing: 0.02em;
@@ -260,7 +260,7 @@ section { padding: 52px 0 4px; }
   color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent);
   border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
 }
-/* 기간 앞의 작은 뱃지 — 넓은 화면에서는 오른쪽 뱃지가 있으므로 숨깁니다 */
+/* 기간 앞의 작은 뱃지 - 넓은 화면에서는 오른쪽 뱃지가 있으므로 숨깁니다 */
 .p-badge.mini { display: none; }
 .chev { width: 11px; height: 11px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
   transform: rotate(45deg) translate(-2px,-2px); transition: transform .2s; flex: none; }
@@ -274,7 +274,7 @@ section { padding: 52px 0 4px; }
   .p-badge.mini { display: inline-block; font-size: 10.5px; padding: 2px 9px; }
 }
 
-/* 개인 프로젝트 카드 — 회사 프로젝트(1~4)와 구분되도록 색을 달리합니다.
+/* 개인 프로젝트 카드 - 회사 프로젝트(1~4)와 구분되도록 색을 달리합니다.
    --accent 를 카드 안에서만 바꾸므로 번호칸 · 표식 · 바로가기 버튼까지 한 번에 따라옵니다 */
 .proj.personal {
   --accent: var(--s2);
@@ -295,7 +295,7 @@ section { padding: 52px 0 4px; }
 }
 .p-link:hover { text-decoration: none; filter: brightness(1.08); }
 .p-link span { font-size: 12px; }
-/* 보조 버튼 — 사이트 바로가기 옆에서 튀지 않도록 테두리형으로 둡니다 */
+/* 보조 버튼 - 사이트 바로가기 옆에서 튀지 않도록 테두리형으로 둡니다 */
 .p-link.ghost {
   color: var(--accent); background: transparent;
   border: 1.5px solid color-mix(in srgb, var(--accent) 45%, transparent);
@@ -306,7 +306,7 @@ section { padding: 52px 0 4px; }
 }
 .p-links + .item { padding-top: 20px; }
 
-/* 세부 항목 (1-1, 1-2 ...) — 프로젝트처럼 접었다 펼 수 있습니다 */
+/* 세부 항목 (1-1, 1-2 ...) - 프로젝트처럼 접었다 펼 수 있습니다 */
 .item { padding-top: 8px; }
 .item + .item { border-top: 1px dashed var(--grid); margin-top: 8px; }
 .item > summary { list-style: none; cursor: pointer; padding: 14px 0 12px; border-radius: 10px; }
@@ -350,7 +350,7 @@ section { padding: 52px 0 4px; }
   font-size: 11.5px; font-weight: 700; color: #fff;
   background: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 2px 9px;
 }
-/* techKey 로 지정한 핵심 도구 — 형광색 */
+/* techKey 로 지정한 핵심 도구 - 형광색 */
 .blk .tech span.key { color: #111; background: #d4ff2a; border-color: #b6e000; }
 .jump { font-weight: 600; white-space: nowrap; }
 .blk .note { font-size: 12.5px; color: var(--muted); margin-top: 8px; padding-left: 14px; }
@@ -372,7 +372,7 @@ section { padding: 52px 0 4px; }
 .metric.down .m-to { color: var(--accent); }
 .metric .m-note { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
 
-/* 낮을수록 좋은 지표 — 작년 → 현재 → 목표를 막대 하나로 보여줍니다 */
+/* 낮을수록 좋은 지표 - 작년 → 현재 → 목표를 막대 하나로 보여줍니다 */
 /* 작년 값은 큰 숫자 위에 한 줄로 올려, 카드마다 줄바꿈 위치가 달라지지 않게 합니다 */
 .metric.track .m-value { flex-direction: column; align-items: flex-start; gap: 1px; }
 .metric.track .m-from { white-space: nowrap; }
@@ -399,7 +399,7 @@ section { padding: 52px 0 4px; }
 }
 .m-chip.done { color: var(--s3); background: color-mix(in srgb, var(--s3) 15%, transparent); }
 
-/* 좁은 화면에서는 한 줄에 두 칸씩 — 세로로 길게 스크롤하지 않도록 */
+/* 좁은 화면에서는 한 줄에 두 칸씩 - 세로로 길게 스크롤하지 않도록 */
 @media (max-width: 640px) {
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .metric { padding: 12px 13px; }

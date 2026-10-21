@@ -1,5 +1,5 @@
 /* ============================================================
-   렌더링 로직  —  내용 수정 시에는 건드릴 일이 없습니다
+   렌더링 로직  -  내용 수정 시에는 건드릴 일이 없습니다
    글 내용은 assets/content.js 를 열어 주세요
    ============================================================ */
 
@@ -52,7 +52,7 @@ document.getElementById("navBar").innerHTML = `
     </div>
   </div>`;
 
-/* CONTACT 뱃지 팝업 — 버튼 클릭으로 열고 닫고, 바깥을 클릭하거나 Esc 를 누르면 닫힙니다 */
+/* CONTACT 뱃지 팝업 - 버튼 클릭으로 열고 닫고, 바깥을 클릭하거나 Esc 를 누르면 닫힙니다 */
 (function initContactPopup() {
   const btn = document.getElementById("contactBtn");
   const pop = document.getElementById("contactPop");
@@ -197,14 +197,14 @@ function renderMetric(m) {
 /* 낮을수록 좋은 지표(저효율 PGM 등)를 막대로 보여줍니다.
      연한 막대 = 작년 결과 (base, 없어도 됩니다)
      진한 막대 = 현재 (now)
-     세로 점선 = 목표 (goal) — 막대가 점선보다 짧으면 목표 달성            */
+     세로 점선 = 목표 (goal) - 막대가 점선보다 짧으면 목표 달성            */
 function renderTrackMetric(m) {
   const u = m.unit || "%";
   const base = typeof m.base === "number" ? m.base : null;
   const goal = typeof m.goal === "number" ? m.goal : null;
   const now = m.now;
 
-  // 막대 눈금의 끝 — 가장 큰 값보다 조금 여유를 둡니다
+  // 막대 눈금의 끝 - 가장 큰 값보다 조금 여유를 둡니다
   const max = Math.max(base || 0, now, goal || 0) * 1.2 || 1;
   const w = v => (v / max * 100).toFixed(1) + "%";
 
